@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="921.333333333333,2612.66666666667" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:si="clr-namespace:System.IO;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="921.333333333333,2909.33333333333" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:si="clr-namespace:System.IO;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="38">
+    <scg:List x:TypeArguments="x:String" Capacity="39">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -39,6 +39,7 @@
       <x:String>UiPath.Mail.Activities</x:String>
       <x:String>UiPath.Excel</x:String>
       <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Xml.Serialization</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -82,25 +83,30 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="518,2548" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="614.666666666667,2933.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="https://rpa-project.maechler-thomas.ch/" Name="str_URL" />
+      <Variable x:TypeArguments="x:String" Name="excel_file_path">
+        <Variable.Default>
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + &quot;\Downloads\rechnungen_rpa\&quot; + DateTime.Now.ToString(&quot;yyyyMMdd&quot;)+&quot;_rechnungen.xlsx&quot;" />
+        </Variable.Default>
+      </Variable>
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="476,62.6666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_12" Text="[&quot;Download files from URL: &quot; + str_URL]" />
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="476,284.666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="572.666666666667,62" sap2010:WorkflowViewState.IdRef="WriteLine_12" Text="[&quot;Download files from URL: &quot; + str_URL]" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="572.666666666667,284" sap2010:WorkflowViewState.IdRef="CommentOut_1">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,206" sap2010:WorkflowViewState.IdRef="Sequence_5">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,205.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_5">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke DownloadAllFilesFromWebsite workflow" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="DownloadAllFilesFromWebsite.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke DownloadAllFilesFromWebsite workflow" sap:VirtualizedContainerService.HintSize="334,113.333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="DownloadAllFilesFromWebsite.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="x:String" x:Key="str_URL">[str_URL]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
@@ -108,14 +114,14 @@
         </Sequence>
       </ui:CommentOut.Body>
     </ui:CommentOut>
-    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="476,62.6666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_13" Text="Get Data from Files" />
-    <Sequence DisplayName="Sequence - Process Files" sap:VirtualizedContainerService.HintSize="476,1060.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="572.666666666667,62" sap2010:WorkflowViewState.IdRef="WriteLine_13" Text="Get Data from Files" />
+    <Sequence DisplayName="Sequence - Process Files" sap:VirtualizedContainerService.HintSize="572.666666666667,1212.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ForEachFileX DisplayName="For Each File in Folder" Folder="[Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + &quot;\Downloads\rechnungen_rpa&quot;]" sap:VirtualizedContainerService.HintSize="434,968.666666666667" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst">
+      <ui:ForEachFileX DisplayName="For Each File in Folder" Folder="[Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + &quot;\Downloads\rechnungen_rpa&quot;]" sap:VirtualizedContainerService.HintSize="530.666666666667,1120.66666666667" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst">
         <ui:ForEachFileX.Body>
           <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
             <ActivityAction.Argument1>
@@ -124,7 +130,7 @@
             <ActivityAction.Argument2>
               <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
             </ActivityAction.Argument2>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,730" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496.666666666667,886" sap2010:WorkflowViewState.IdRef="Sequence_4">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="pdf_text" />
                 <Variable x:TypeArguments="x:String" Name="file_name" />
@@ -134,8 +140,8 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ReadPDFText PreserveFormatting="{x:Null}" DisplayName="Read PDF Text" FileName="[CurrentFile.ToString]" sap:VirtualizedContainerService.HintSize="334,82.6666666666667" sap2010:WorkflowViewState.IdRef="ReadPDFText_1" Range="All" Text="[pdf_text]" />
-              <Assign sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <ui:ReadPDFText PreserveFormatting="{x:Null}" DisplayName="Read PDF Text" FileName="[CurrentFile.ToString]" sap:VirtualizedContainerService.HintSize="454.666666666667,82" sap2010:WorkflowViewState.IdRef="ReadPDFText_1" Range="All" Text="[pdf_text]" />
+              <Assign sap:VirtualizedContainerService.HintSize="454.666666666667,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[file_name]</OutArgument>
                 </Assign.To>
@@ -143,60 +149,79 @@
                   <InArgument x:TypeArguments="x:String">[CurrentFile.Name.Split(".".ToCharArray).First + ".txt"]</InArgument>
                 </Assign.Value>
               </Assign>
-              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,62.6666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_16" Text="[file_name]" />
-              <ui:CreateFile ContinueOnError="{x:Null}" DisplayName="Create File" sap:VirtualizedContainerService.HintSize="334,135.333333333333" sap2010:WorkflowViewState.IdRef="CreateFile_1" Name="[file_name]" Path="C:\Users\alexa\Downloads" />
-              <ui:WriteTextFile DisplayName="Write Text File" FileName="[&quot;C:\Users\alexa\Downloads\&quot; + file_name]" sap:VirtualizedContainerService.HintSize="334,135.333333333333" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[pdf_text]" />
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="454.666666666667,570.666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+                <ui:CommentOut.Body>
+                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="418,492" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Sequence DisplayName="Sequence - create and write files" sap:VirtualizedContainerService.HintSize="376,400" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:CreateFile ContinueOnError="{x:Null}" DisplayName="Create File" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="CreateFile_1" Name="[file_name]" Path="C:\Users\alexa\Downloads" />
+                      <ui:WriteTextFile DisplayName="Write Text File" FileName="[&quot;C:\Users\alexa\Downloads\&quot; + file_name]" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[pdf_text]" />
+                    </Sequence>
+                  </Sequence>
+                </ui:CommentOut.Body>
+              </ui:CommentOut>
             </Sequence>
           </ActivityAction>
         </ui:ForEachFileX.Body>
       </ui:ForEachFileX>
     </Sequence>
-    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="476,62.6666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_17" Text="Write Email" />
-    <Sequence DisplayName="Sequence - Write Email to User" sap:VirtualizedContainerService.HintSize="476,722.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_7">
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="572.666666666667,62" sap2010:WorkflowViewState.IdRef="WriteLine_19" Text="Make Excel" />
+    <Sequence DisplayName="Sequence - Make Excel File" sap:VirtualizedContainerService.HintSize="572.666666666667,305.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_13">
       <Sequence.Variables>
-        <Variable x:TypeArguments="x:String" Name="email">
-          <Variable.Default>
-            <Literal x:TypeArguments="x:String">alexandru.schneider@stud.fhgr.ch</Literal>
-          </Variable.Default>
-        </Variable>
-        <Variable x:TypeArguments="ui:WorkbookApplication" Name="excel_file" />
-        <Variable x:TypeArguments="x:String" Name="excel_file_path">
-          <Variable.Default>
-            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + &quot;\Downloads\rechnungen_rpa\&quot; + DateTime.Now.ToString(&quot;yyyyMMdd&quot;)+&quot;_rechnungen.xlsx&quot;" />
-          </Variable.Default>
-        </Variable>
+        <Variable x:TypeArguments="sd:DataTable" Name="data_table" />
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,287.333333333333" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" Workbook="[excel_file]" WorkbookPath="[excel_file_path]">
-        <ui:ExcelApplicationScope.Body>
-          <ActivityAction x:TypeArguments="ui:WorkbookApplication">
-            <ActivityAction.Argument>
-              <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
-            </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,178.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_8">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <ui:ExcelWriteCell Cell="A1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,86.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_1" SheetName="Sheet1" Text="100" />
-            </Sequence>
-          </ActivityAction>
-        </ui:ExcelApplicationScope.Body>
-      </ui:ExcelApplicationScope>
-      <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;Sehr geehrtes Team,&quot;+Environment.NewLine+Environment.NewLine+&quot;ich freue mich, Ihnen den automatisierten Rechnungs-Extraktionsbericht für den &quot; + DateTime.Now.ToString(&quot;dd.MM.yyyy&quot;) + &quot; zuzusenden. Unser System hat erfolgreich alle Rechnungsdokumente von der Unternehmenswebsite extrahiert und die relevanten Daten In einer übersichtlichen Excel-Tabelle organisiert.&quot;+Environment.NewLine+&quot;Anbei finden Sie den Excel-Bericht mit den extrahierten Werten. Bitte prüfen Sie die Daten sorgfältig, um sicherzustellen, dass alle Informationen korrekt erfasst wurden. Falls Sie Fragen oder Anmerkungen haben, stehe ich Ihnen gerne zur Verfügung.&quot;+Environment.NewLine+&quot;Wir freuen uns, Ihnen diesen automatisierten Prozess zur Verfügung stellen zu können, der Ihnen Zeit und Aufwand bei der Verarbeitung von Rechnungen spart. Sollten Sie weitere Anpassungen oder Verbesserungsvorschläge haben, zögern Sie bitte nicht, uns zu kontaktieren.&quot;+Environment.NewLine+&quot;Mit freundlichen Grüssen,&quot;+Environment.NewLine+&quot;Gruppe 2&quot;]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="434,303.333333333333" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="[&quot;Automatisierter Rechnungs-Extraktionsbericht vom &quot; + DateTime.Now.ToString(&quot;dd.MM.yyyy&quot;)]" To="[email]">
-        <ui:SendOutlookMail.Files>
-          <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
-            <InArgument x:TypeArguments="x:String">
-              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="excel_file_path" />
-            </InArgument>
-          </scg:List>
-        </ui:SendOutlookMail.Files>
-      </ui:SendOutlookMail>
+      <ui:BuildDataTable DataTable="[data_table]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Rechnungsnummer&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Vorname&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Nachname&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Betrag&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Firmenname&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Adresse&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Rechnungsnummer&gt;1&lt;/Rechnungsnummer&gt;&#xD;&#xA;    &lt;Vorname&gt;Thomas&lt;/Vorname&gt;&#xD;&#xA;    &lt;Nachname&gt;Mächler&lt;/Nachname&gt;&#xD;&#xA;    &lt;Betrag&gt;100&lt;/Betrag&gt;&#xD;&#xA;    &lt;Firmenname&gt;FHGR&lt;/Firmenname&gt;&#xD;&#xA;    &lt;Adresse&gt;Chur&lt;/Adresse&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
+      <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[data_table]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="334,114.666666666667" sap2010:WorkflowViewState.IdRef="WriteRange_3" SheetName="Tabelle1" WorkbookPath="[Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + &quot;\Downloads\rechnungen_rpa\&quot; + DateTime.Now.ToString(&quot;yyyyMMdd&quot;)+&quot;_rechnungen.xlsx&quot;]" />
     </Sequence>
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="572.666666666667,62" sap2010:WorkflowViewState.IdRef="WriteLine_17" Text="Write Email" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="572.666666666667,409.333333333333" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="418,330.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_16">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="Sequence - Write Email to User" sap:VirtualizedContainerService.HintSize="376,238.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="email">
+                <Variable.Default>
+                  <Literal x:TypeArguments="x:String">alexandru.schneider@stud.fhgr.ch</Literal>
+                </Variable.Default>
+              </Variable>
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;Sehr geehrtes Team,&quot;+Environment.NewLine+Environment.NewLine+&quot;ich freue mich, Ihnen den automatisierten Rechnungs-Extraktionsbericht für den &quot; + DateTime.Now.ToString(&quot;dd.MM.yyyy&quot;) + &quot; zuzusenden. Unser System hat erfolgreich alle Rechnungsdokumente von der Unternehmenswebsite extrahiert und die relevanten Daten In einer übersichtlichen Excel-Tabelle organisiert.&quot;+Environment.NewLine+&quot;Anbei finden Sie den Excel-Bericht mit den extrahierten Werten. Bitte prüfen Sie die Daten sorgfältig, um sicherzustellen, dass alle Informationen korrekt erfasst wurden. Falls Sie Fragen oder Anmerkungen haben, stehe ich Ihnen gerne zur Verfügung.&quot;+Environment.NewLine+&quot;Wir freuen uns, Ihnen diesen automatisierten Prozess zur Verfügung stellen zu können, der Ihnen Zeit und Aufwand bei der Verarbeitung von Rechnungen spart. Sollten Sie weitere Anpassungen oder Verbesserungsvorschläge haben, zögern Sie bitte nicht, uns zu kontaktieren.&quot;+Environment.NewLine+&quot;Mit freundlichen Grüssen,&quot;+Environment.NewLine+&quot;Gruppe 2&quot;]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="334,146.666666666667" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="[&quot;Automatisierter Rechnungs-Extraktionsbericht vom &quot; + DateTime.Now.ToString(&quot;dd.MM.yyyy&quot;)]" To="[email]">
+              <ui:SendOutlookMail.Files>
+                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                  <InArgument x:TypeArguments="x:String">
+                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="excel_file_path" />
+                  </InArgument>
+                </scg:List>
+              </ui:SendOutlookMail.Files>
+            </ui:SendOutlookMail>
+          </Sequence>
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="572.666666666667,62" sap2010:WorkflowViewState.IdRef="WriteLine_20" Text="Done!" />
   </Sequence>
 </Activity>
