@@ -20,16 +20,22 @@
           "lib/net40/BitMiracle.LibTiff.NET.dll": {}
         }
       },
-      "ClosedXML/0.87.1": {
+      "ClosedXML/0.95.4": {
         "type": "package",
         "dependencies": {
-          "DocumentFormat.OpenXml": "2.5.0"
+          "DocumentFormat.OpenXml": "2.7.2",
+          "ExcelNumberFormat": "1.0.10",
+          "Microsoft.CSharp": "4.7.0"
         },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "WindowsBase"
+        ],
         "compile": {
-          "lib/net40/_._": {}
+          "lib/net46/_._": {}
         },
         "runtime": {
-          "lib/net40/ClosedXML.dll": {}
+          "lib/net46/ClosedXML.dll": {}
         }
       },
       "CsvHelper/16.0.0": {
@@ -45,13 +51,25 @@
           "lib/net45/CsvHelper.dll": {}
         }
       },
-      "DocumentFormat.OpenXml/2.5.0": {
+      "DocumentFormat.OpenXml/2.7.2": {
         "type": "package",
+        "dependencies": {
+          "System.IO.Packaging": "4.0.0"
+        },
         "compile": {
-          "lib/_._": {}
+          "lib/net46/_._": {}
         },
         "runtime": {
-          "lib/DocumentFormat.OpenXml.dll": {}
+          "lib/net46/DocumentFormat.OpenXml.dll": {}
+        }
+      },
+      "ExcelNumberFormat/1.0.10": {
+        "type": "package",
+        "compile": {
+          "lib/net20/_._": {}
+        },
+        "runtime": {
+          "lib/net20/ExcelNumberFormat.dll": {}
         }
       },
       "Google.Apis/1.43.0": {
@@ -887,10 +905,11 @@
           "lib/net461/Nito.Disposables.dll": {}
         }
       },
-      "NPOI/2.4.1": {
+      "NPOI/2.5.5": {
         "type": "package",
         "dependencies": {
-          "SharpZipLib": "1.0.0"
+          "Portable.BouncyCastle": "1.8.9",
+          "SharpZipLib": "1.3.2"
         },
         "compile": {
           "lib/net45/_._": {}
@@ -911,7 +930,7 @@
           "lib/netstandard2.0/NTextCat.dll": {}
         }
       },
-      "Portable.BouncyCastle/1.8.8": {
+      "Portable.BouncyCastle/1.8.9": {
         "type": "package",
         "compile": {
           "lib/net40/_._": {}
@@ -920,7 +939,7 @@
           "lib/net40/BouncyCastle.Crypto.dll": {}
         }
       },
-      "SharpZipLib/1.2.0": {
+      "SharpZipLib/1.3.3": {
         "type": "package",
         "compile": {
           "lib/net45/_._": {}
@@ -990,6 +1009,34 @@
         },
         "runtime": {
           "lib/net40/System.IO.Abstractions.dll": {}
+        }
+      },
+      "System.IO.FileSystem.Primitives/4.0.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net46/_._": {}
+        },
+        "runtime": {
+          "lib/net46/System.IO.FileSystem.Primitives.dll": {}
+        }
+      },
+      "System.IO.Packaging/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.FileSystem.Primitives": "4.0.1"
+        },
+        "frameworkAssemblies": [
+          "WindowsBase",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net46/_._": {}
+        },
+        "runtime": {
+          "lib/net46/System.IO.Packaging.dll": {}
         }
       },
       "System.IO.Pipelines/4.7.1": {
@@ -1120,10 +1167,11 @@
           "build/net461/_._": {}
         }
       },
-      "System.Text.Encoding.CodePages/4.5.1": {
+      "System.Text.Encoding.CodePages/6.0.0": {
         "type": "package",
         "dependencies": {
-          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+          "System.Memory": "4.5.4",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         },
         "compile": {
           "lib/net461/_._": {}
@@ -1304,14 +1352,18 @@
           "lib/net461/UiPath.DocumentUnderstanding.Digitizer.dll": {}
         }
       },
-      "UiPath.Excel.Activities/2.11.4": {
+      "UiPath.Excel.Activities/2.22.3": {
         "type": "package",
         "dependencies": {
-          "ClosedXML": "0.87.1",
+          "ClosedXML": "0.95.4",
           "CsvHelper": "15.0.5",
-          "DocumentFormat.OpenXml": "2.5.0",
+          "DocumentFormat.OpenXml": "2.7.2",
           "Microsoft.VisualStudio.OLE.Interop": "16.7.30328.74",
-          "NPOI": "2.4.1"
+          "NPOI": "2.5.5",
+          "SharpZipLib": "1.3.3",
+          "System.Text.Encoding.CodePages": "6.0.0",
+          "UiPath.Platform": "23.10.0",
+          "UiPath.Telemetry.Client": "1.6.69"
         },
         "compile": {
           "lib/net461/_._": {}
@@ -1424,6 +1476,15 @@
           },
           "lib/net461/zh-CN/UiPath.Excel.resources.dll": {
             "locale": "zh-CN"
+          },
+          "lib/net461/zh-TW/UiPath.Excel.Activities.Design.resources.dll": {
+            "locale": "zh-TW"
+          },
+          "lib/net461/zh-TW/UiPath.Excel.Activities.resources.dll": {
+            "locale": "zh-TW"
+          },
+          "lib/net461/zh-TW/UiPath.Excel.resources.dll": {
+            "locale": "zh-TW"
           }
         }
       },
@@ -1803,10 +1864,10 @@
           }
         }
       },
-      "UiPath.Platform/21.10.0": {
+      "UiPath.Platform/23.10.0": {
         "type": "package",
         "dependencies": {
-          "Newtonsoft.Json": "11.0.2",
+          "Newtonsoft.Json": "13.0.1",
           "System.IO.Abstractions": "3.0.10",
           "System.ValueTuple": "4.5.0"
         },
@@ -1818,6 +1879,41 @@
         },
         "runtime": {
           "lib/net461/UiPath.Platform.dll": {}
+        },
+        "resource": {
+          "lib/net461/de/UiPath.Platform.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net461/es-MX/UiPath.Platform.resources.dll": {
+            "locale": "es-MX"
+          },
+          "lib/net461/es/UiPath.Platform.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net461/fr/UiPath.Platform.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net461/ja/UiPath.Platform.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net461/ko/UiPath.Platform.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net461/pt-BR/UiPath.Platform.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net461/pt/UiPath.Platform.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net461/ru/UiPath.Platform.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net461/tr/UiPath.Platform.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net461/zh-CN/UiPath.Platform.resources.dll": {
+            "locale": "zh-CN"
+          }
         }
       },
       "UiPath.System.Activities/21.10.5": {
@@ -1915,7 +2011,7 @@
           }
         }
       },
-      "UiPath.Telemetry.Client/1.5.3": {
+      "UiPath.Telemetry.Client/1.6.69": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "11.0.2",
@@ -2262,16 +2358,22 @@
           "lib/net40/BitMiracle.LibTiff.NET.dll": {}
         }
       },
-      "ClosedXML/0.87.1": {
+      "ClosedXML/0.95.4": {
         "type": "package",
         "dependencies": {
-          "DocumentFormat.OpenXml": "2.5.0"
+          "DocumentFormat.OpenXml": "2.7.2",
+          "ExcelNumberFormat": "1.0.10",
+          "Microsoft.CSharp": "4.7.0"
         },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "WindowsBase"
+        ],
         "compile": {
-          "lib/net40/_._": {}
+          "lib/net46/_._": {}
         },
         "runtime": {
-          "lib/net40/ClosedXML.dll": {}
+          "lib/net46/ClosedXML.dll": {}
         }
       },
       "CsvHelper/16.0.0": {
@@ -2287,13 +2389,25 @@
           "lib/net45/CsvHelper.dll": {}
         }
       },
-      "DocumentFormat.OpenXml/2.5.0": {
+      "DocumentFormat.OpenXml/2.7.2": {
         "type": "package",
+        "dependencies": {
+          "System.IO.Packaging": "4.0.0"
+        },
         "compile": {
-          "lib/_._": {}
+          "lib/net46/_._": {}
         },
         "runtime": {
-          "lib/DocumentFormat.OpenXml.dll": {}
+          "lib/net46/DocumentFormat.OpenXml.dll": {}
+        }
+      },
+      "ExcelNumberFormat/1.0.10": {
+        "type": "package",
+        "compile": {
+          "lib/net20/_._": {}
+        },
+        "runtime": {
+          "lib/net20/ExcelNumberFormat.dll": {}
         }
       },
       "Google.Apis/1.43.0": {
@@ -3126,10 +3240,11 @@
           "lib/net461/Nito.Disposables.dll": {}
         }
       },
-      "NPOI/2.4.1": {
+      "NPOI/2.5.5": {
         "type": "package",
         "dependencies": {
-          "SharpZipLib": "1.0.0"
+          "Portable.BouncyCastle": "1.8.9",
+          "SharpZipLib": "1.3.2"
         },
         "compile": {
           "lib/net45/_._": {}
@@ -3150,7 +3265,7 @@
           "lib/netstandard2.0/NTextCat.dll": {}
         }
       },
-      "Portable.BouncyCastle/1.8.8": {
+      "Portable.BouncyCastle/1.8.9": {
         "type": "package",
         "compile": {
           "lib/net40/_._": {}
@@ -3159,7 +3274,7 @@
           "lib/net40/BouncyCastle.Crypto.dll": {}
         }
       },
-      "SharpZipLib/1.2.0": {
+      "SharpZipLib/1.3.3": {
         "type": "package",
         "compile": {
           "lib/net45/_._": {}
@@ -3229,6 +3344,34 @@
         },
         "runtime": {
           "lib/net40/System.IO.Abstractions.dll": {}
+        }
+      },
+      "System.IO.FileSystem.Primitives/4.0.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net46/_._": {}
+        },
+        "runtime": {
+          "lib/net46/System.IO.FileSystem.Primitives.dll": {}
+        }
+      },
+      "System.IO.Packaging/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.FileSystem.Primitives": "4.0.1"
+        },
+        "frameworkAssemblies": [
+          "WindowsBase",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net46/_._": {}
+        },
+        "runtime": {
+          "lib/net46/System.IO.Packaging.dll": {}
         }
       },
       "System.IO.Pipelines/4.7.1": {
@@ -3353,10 +3496,11 @@
           "build/net461/_._": {}
         }
       },
-      "System.Text.Encoding.CodePages/4.5.1": {
+      "System.Text.Encoding.CodePages/6.0.0": {
         "type": "package",
         "dependencies": {
-          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+          "System.Memory": "4.5.4",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         },
         "compile": {
           "lib/net461/_._": {}
@@ -3531,14 +3675,18 @@
           "lib/net461/UiPath.DocumentUnderstanding.Digitizer.dll": {}
         }
       },
-      "UiPath.Excel.Activities/2.11.4": {
+      "UiPath.Excel.Activities/2.22.3": {
         "type": "package",
         "dependencies": {
-          "ClosedXML": "0.87.1",
+          "ClosedXML": "0.95.4",
           "CsvHelper": "15.0.5",
-          "DocumentFormat.OpenXml": "2.5.0",
+          "DocumentFormat.OpenXml": "2.7.2",
           "Microsoft.VisualStudio.OLE.Interop": "16.7.30328.74",
-          "NPOI": "2.4.1"
+          "NPOI": "2.5.5",
+          "SharpZipLib": "1.3.3",
+          "System.Text.Encoding.CodePages": "6.0.0",
+          "UiPath.Platform": "23.10.0",
+          "UiPath.Telemetry.Client": "1.6.69"
         },
         "compile": {
           "lib/net461/_._": {}
@@ -3651,6 +3799,15 @@
           },
           "lib/net461/zh-CN/UiPath.Excel.resources.dll": {
             "locale": "zh-CN"
+          },
+          "lib/net461/zh-TW/UiPath.Excel.Activities.Design.resources.dll": {
+            "locale": "zh-TW"
+          },
+          "lib/net461/zh-TW/UiPath.Excel.Activities.resources.dll": {
+            "locale": "zh-TW"
+          },
+          "lib/net461/zh-TW/UiPath.Excel.resources.dll": {
+            "locale": "zh-TW"
           }
         }
       },
@@ -4030,10 +4187,10 @@
           }
         }
       },
-      "UiPath.Platform/21.10.0": {
+      "UiPath.Platform/23.10.0": {
         "type": "package",
         "dependencies": {
-          "Newtonsoft.Json": "11.0.2",
+          "Newtonsoft.Json": "13.0.1",
           "System.IO.Abstractions": "3.0.10",
           "System.ValueTuple": "4.5.0"
         },
@@ -4045,6 +4202,41 @@
         },
         "runtime": {
           "lib/net461/UiPath.Platform.dll": {}
+        },
+        "resource": {
+          "lib/net461/de/UiPath.Platform.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net461/es-MX/UiPath.Platform.resources.dll": {
+            "locale": "es-MX"
+          },
+          "lib/net461/es/UiPath.Platform.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net461/fr/UiPath.Platform.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net461/ja/UiPath.Platform.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net461/ko/UiPath.Platform.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net461/pt-BR/UiPath.Platform.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net461/pt/UiPath.Platform.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net461/ru/UiPath.Platform.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net461/tr/UiPath.Platform.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net461/zh-CN/UiPath.Platform.resources.dll": {
+            "locale": "zh-CN"
+          }
         }
       },
       "UiPath.System.Activities/21.10.5": {
@@ -4142,7 +4334,7 @@
           }
         }
       },
-      "UiPath.Telemetry.Client/1.5.3": {
+      "UiPath.Telemetry.Client/1.6.69": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "11.0.2",
@@ -4506,21 +4698,25 @@
         "lib/netstandard2.0/BitMiracle.LibTiff.NET.xml"
       ]
     },
-    "ClosedXML/0.87.1": {
-      "sha512": "2LC0T8bu2G2kt34C4Ig87uZfrRO4MwMVI54e2To7m3DvwAs2Z2Ir86WQuUoW8Txo1uNGSfmu3DpfpQhSX0bIww==",
+    "ClosedXML/0.95.4": {
+      "sha512": "YixFPzUJ4Ni2AaW/FbPgzFvdtjIzE/4NKROwI1RqIQHWka7QN9Spt4sHuXaSk9PLmXBkk8newHGW0UWLcLs5GA==",
       "type": "package",
-      "path": "closedxml/0.87.1",
+      "path": "closedxml/0.95.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "closedxml.0.87.1.nupkg.sha512",
+        "closedxml.0.95.4.nupkg.sha512",
         "closedxml.nuspec",
-        "lib/net35/ClosedXML.dll",
-        "lib/net35/ClosedXML.pdb",
-        "lib/net35/ClosedXML.xml",
         "lib/net40/ClosedXML.dll",
         "lib/net40/ClosedXML.pdb",
-        "lib/net40/ClosedXML.xml"
+        "lib/net40/ClosedXML.xml",
+        "lib/net46/ClosedXML.dll",
+        "lib/net46/ClosedXML.pdb",
+        "lib/net46/ClosedXML.xml",
+        "lib/netstandard2.0/ClosedXML.dll",
+        "lib/netstandard2.0/ClosedXML.pdb",
+        "lib/netstandard2.0/ClosedXML.xml",
+        "nuget-logo.png"
       ]
     },
     "CsvHelper/16.0.0": {
@@ -4543,16 +4739,39 @@
         "lib/netstandard2.1/CsvHelper.xml"
       ]
     },
-    "DocumentFormat.OpenXml/2.5.0": {
-      "sha512": "H5jnox0hcLwzAjrpNqDPIItjh7dplF1kk1z8LatpI2h75wBgps1MepEttJFKs7xedQReCMHA0tGpNI0H2B+Mrg==",
+    "DocumentFormat.OpenXml/2.7.2": {
+      "sha512": "tWT7iu0ab9PNoMTWjv24rt+qnyqvcnPOYs167vPnk4aegAYSAxoUjwNW+VxY8xoLtJntQ/JlWTi7Vt+8TghLlQ==",
       "type": "package",
-      "path": "documentformat.openxml/2.5.0",
+      "path": "documentformat.openxml/2.7.2",
+      "files": [
+        ".nupkg.metadata",
+        "documentformat.openxml.2.7.2.nupkg.sha512",
+        "documentformat.openxml.nuspec",
+        "lib/net35/DocumentFormat.OpenXml.dll",
+        "lib/net35/DocumentFormat.OpenXml.xml",
+        "lib/net40/DocumentFormat.OpenXml.dll",
+        "lib/net40/DocumentFormat.OpenXml.xml",
+        "lib/net46/DocumentFormat.OpenXml.dll",
+        "lib/net46/DocumentFormat.OpenXml.xml",
+        "lib/netstandard1.3/DocumentFormat.OpenXml.dll",
+        "lib/netstandard1.3/DocumentFormat.OpenXml.xml"
+      ]
+    },
+    "ExcelNumberFormat/1.0.10": {
+      "sha512": "dRx817M5t0sv4GCJyAXU8qmhFXcqRpCHzLpxNmkMWTvzlfE0/KM7BNk6qEble0ffAr4xT7RyU7s/HpovVlA/9g==",
+      "type": "package",
+      "path": "excelnumberformat/1.0.10",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "documentformat.openxml.2.5.0.nupkg.sha512",
-        "documentformat.openxml.nuspec",
-        "lib/DocumentFormat.OpenXml.dll"
+        "excelnumberformat.1.0.10.nupkg.sha512",
+        "excelnumberformat.nuspec",
+        "lib/net20/ExcelNumberFormat.dll",
+        "lib/net20/ExcelNumberFormat.xml",
+        "lib/netstandard1.0/ExcelNumberFormat.dll",
+        "lib/netstandard1.0/ExcelNumberFormat.xml",
+        "lib/netstandard2.0/ExcelNumberFormat.dll",
+        "lib/netstandard2.0/ExcelNumberFormat.xml"
       ]
     },
     "Google.Apis/1.43.0": {
@@ -5982,37 +6201,50 @@
         "nito.disposables.nuspec"
       ]
     },
-    "NPOI/2.4.1": {
-      "sha512": "85790/CY9z4DCU1KLpcdLSqaqaqmQOenTqXJfcsYK8LIKNAAoTgjT5LYLbORgdwAd63sbaJiCfB1SIn/dAXrJw==",
+    "NPOI/2.5.5": {
+      "sha512": "xTCJOXdcBWV9GUAVRJTC73L5bU3Ahgtuk13U/rOix8Gi05XWf9E4K+vGx63JZt35WoroXq+hM0RZ+aad2y8Ceg==",
       "type": "package",
-      "path": "npoi/2.4.1",
+      "path": "npoi/2.5.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE",
         "Read Me.txt",
-        "lib/NPOI.xml",
-        "lib/net40/NPOI.OOXML.dll",
-        "lib/net40/NPOI.OpenXml4Net.dll",
-        "lib/net40/NPOI.OpenXmlFormats.dll",
-        "lib/net40/NPOI.dll",
+        "lib/net45/NPOI.OOXML.XML",
         "lib/net45/NPOI.OOXML.dll",
+        "lib/net45/NPOI.OOXML.pdb",
         "lib/net45/NPOI.OpenXml4Net.dll",
+        "lib/net45/NPOI.OpenXml4Net.pdb",
         "lib/net45/NPOI.OpenXmlFormats.dll",
+        "lib/net45/NPOI.OpenXmlFormats.pdb",
+        "lib/net45/NPOI.XML",
         "lib/net45/NPOI.dll",
-        "lib/netstandard2.0/NPOI.OOXML.deps.json",
+        "lib/net45/NPOI.pdb",
         "lib/netstandard2.0/NPOI.OOXML.dll",
-        "lib/netstandard2.0/NPOI.OpenXml4Net.deps.json",
+        "lib/netstandard2.0/NPOI.OOXML.pdb",
+        "lib/netstandard2.0/NPOI.OOXML.xml",
         "lib/netstandard2.0/NPOI.OpenXml4Net.dll",
-        "lib/netstandard2.0/NPOI.OpenXmlFormats.deps.json",
+        "lib/netstandard2.0/NPOI.OpenXml4Net.pdb",
         "lib/netstandard2.0/NPOI.OpenXmlFormats.dll",
-        "lib/netstandard2.0/NPOI.deps.json",
+        "lib/netstandard2.0/NPOI.OpenXmlFormats.pdb",
         "lib/netstandard2.0/NPOI.dll",
+        "lib/netstandard2.0/NPOI.pdb",
+        "lib/netstandard2.0/NPOI.xml",
+        "lib/netstandard2.1/NPOI.OOXML.dll",
+        "lib/netstandard2.1/NPOI.OOXML.pdb",
+        "lib/netstandard2.1/NPOI.OOXML.xml",
+        "lib/netstandard2.1/NPOI.OpenXml4Net.dll",
+        "lib/netstandard2.1/NPOI.OpenXml4Net.pdb",
+        "lib/netstandard2.1/NPOI.OpenXmlFormats.dll",
+        "lib/netstandard2.1/NPOI.OpenXmlFormats.pdb",
+        "lib/netstandard2.1/NPOI.dll",
+        "lib/netstandard2.1/NPOI.pdb",
+        "lib/netstandard2.1/NPOI.xml",
         "logo/120_120.jpg",
         "logo/240_240.png",
         "logo/32_32.jpg",
         "logo/60_60.jpg",
-        "npoi.2.4.1.nupkg.sha512",
+        "npoi.2.5.5.nupkg.sha512",
         "npoi.nuspec"
       ]
     },
@@ -6030,10 +6262,10 @@
         "ntextcat.nuspec"
       ]
     },
-    "Portable.BouncyCastle/1.8.8": {
-      "sha512": "1rxdf8NfyAxLlqIEciCl/yNhmz1YiLkmp6rrF8p3/NVmyHHzPWLx8djtDvSAwhPLg64BXvsRcM3+5bP1HAUdYg==",
+    "Portable.BouncyCastle/1.8.9": {
+      "sha512": "wlJo8aFoeyl+W93iFXTK5ShzDYk5WBqoUPjTNEM0Xv9kn1H+4hmuCjF0/n8HLm9Nnp1aY6KNndWqQTNk+NGgRQ==",
       "type": "package",
-      "path": "portable.bouncycastle/1.8.8",
+      "path": "portable.bouncycastle/1.8.9",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -6041,23 +6273,28 @@
         "lib/net40/BouncyCastle.Crypto.xml",
         "lib/netstandard2.0/BouncyCastle.Crypto.dll",
         "lib/netstandard2.0/BouncyCastle.Crypto.xml",
-        "portable.bouncycastle.1.8.8.nupkg.sha512",
+        "portable.bouncycastle.1.8.9.nupkg.sha512",
         "portable.bouncycastle.nuspec"
       ]
     },
-    "SharpZipLib/1.2.0": {
-      "sha512": "zvWa/L02JHNatdtjya6Swpudb2YEHaOLHL1eRrqpjm71iGRNUNONO5adUF/9CHbSJbzhELW1UoH4NGy7n7+3bQ==",
+    "SharpZipLib/1.3.3": {
+      "sha512": "N8+hwhsKZm25tDJfWpBSW7EGhH/R7EMuiX+KJ4C4u+fCWVc1lJ5zg1u3S1RPPVYgTqhx/C3hxrqUpi6RwK5+Tg==",
       "type": "package",
-      "path": "sharpziplib/1.2.0",
+      "path": "sharpziplib/1.3.3",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
+        "images/sharpziplib-nuget-256x256.png",
         "lib/net45/ICSharpCode.SharpZipLib.dll",
         "lib/net45/ICSharpCode.SharpZipLib.pdb",
         "lib/net45/ICSharpCode.SharpZipLib.xml",
         "lib/netstandard2.0/ICSharpCode.SharpZipLib.dll",
         "lib/netstandard2.0/ICSharpCode.SharpZipLib.pdb",
         "lib/netstandard2.0/ICSharpCode.SharpZipLib.xml",
-        "sharpziplib.1.2.0.nupkg.sha512",
+        "lib/netstandard2.1/ICSharpCode.SharpZipLib.dll",
+        "lib/netstandard2.1/ICSharpCode.SharpZipLib.pdb",
+        "lib/netstandard2.1/ICSharpCode.SharpZipLib.xml",
+        "sharpziplib.1.3.3.nupkg.sha512",
         "sharpziplib.nuspec"
       ]
     },
@@ -6238,6 +6475,61 @@
         "lib/netstandard2.0/System.IO.Abstractions.xml",
         "system.io.abstractions.3.0.10.nupkg.sha512",
         "system.io.abstractions.nuspec"
+      ]
+    },
+    "System.IO.FileSystem.Primitives/4.0.1": {
+      "sha512": "kWkKD203JJKxJeE74p8aF8y4Qc9r9WQx4C0cHzHPrY3fv/L/IhWnyCHaFJ3H1QPOH6A93whlQ2vG5nHlBDvzWQ==",
+      "type": "package",
+      "path": "system.io.filesystem.primitives/4.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.IO.FileSystem.Primitives.dll",
+        "lib/netstandard1.3/System.IO.FileSystem.Primitives.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.IO.FileSystem.Primitives.dll",
+        "ref/netstandard1.3/System.IO.FileSystem.Primitives.dll",
+        "ref/netstandard1.3/System.IO.FileSystem.Primitives.xml",
+        "ref/netstandard1.3/de/System.IO.FileSystem.Primitives.xml",
+        "ref/netstandard1.3/es/System.IO.FileSystem.Primitives.xml",
+        "ref/netstandard1.3/fr/System.IO.FileSystem.Primitives.xml",
+        "ref/netstandard1.3/it/System.IO.FileSystem.Primitives.xml",
+        "ref/netstandard1.3/ja/System.IO.FileSystem.Primitives.xml",
+        "ref/netstandard1.3/ko/System.IO.FileSystem.Primitives.xml",
+        "ref/netstandard1.3/ru/System.IO.FileSystem.Primitives.xml",
+        "ref/netstandard1.3/zh-hans/System.IO.FileSystem.Primitives.xml",
+        "ref/netstandard1.3/zh-hant/System.IO.FileSystem.Primitives.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.io.filesystem.primitives.4.0.1.nupkg.sha512",
+        "system.io.filesystem.primitives.nuspec"
+      ]
+    },
+    "System.IO.Packaging/4.0.0": {
+      "sha512": "taPqPWcAj/h6e/c+zIWIVe1ddJtpV6acC6g9GpolxUcIwUaH6zc0ZbFS8kkVzBkuWv76pMalKeTzfmHtfT1pXA==",
+      "type": "package",
+      "path": "system.io.packaging/4.0.0",
+      "files": [
+        ".nupkg.metadata",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/net46/System.IO.Packaging.dll",
+        "lib/netstandard1.3/System.IO.Packaging.dll",
+        "ref/net46/System.IO.Packaging.dll",
+        "ref/netstandard1.3/System.IO.Packaging.dll",
+        "system.io.packaging.4.0.0.nupkg.sha512",
+        "system.io.packaging.nuspec"
       ]
     },
     "System.IO.Pipelines/4.7.1": {
@@ -6573,39 +6865,43 @@
         "version.txt"
       ]
     },
-    "System.Text.Encoding.CodePages/4.5.1": {
-      "sha512": "4J2JQXbftjPMppIHJ7IC+VXQ9XfEagN92vZZNoG12i+zReYlim5dMoXFC1Zzg7tsnKDM7JPo5bYfFK4Jheq44w==",
+    "System.Text.Encoding.CodePages/6.0.0": {
+      "sha512": "ZFCILZuOvtKPauZ/j/swhvw68ZRi9ATCfvGbk1QfydmcXBkIWecWKn/250UH7rahZ5OoDBaiAudJtPvLwzw85A==",
       "type": "package",
-      "path": "system.text.encoding.codepages/4.5.1",
+      "path": "system.text.encoding.codepages/6.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/System.Text.Encoding.CodePages.targets",
+        "buildTransitive/netcoreapp3.1/_._",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
-        "lib/net46/System.Text.Encoding.CodePages.dll",
         "lib/net461/System.Text.Encoding.CodePages.dll",
-        "lib/netstandard1.3/System.Text.Encoding.CodePages.dll",
+        "lib/net461/System.Text.Encoding.CodePages.xml",
+        "lib/net6.0/System.Text.Encoding.CodePages.dll",
+        "lib/net6.0/System.Text.Encoding.CodePages.xml",
+        "lib/netcoreapp3.1/System.Text.Encoding.CodePages.dll",
+        "lib/netcoreapp3.1/System.Text.Encoding.CodePages.xml",
         "lib/netstandard2.0/System.Text.Encoding.CodePages.dll",
+        "lib/netstandard2.0/System.Text.Encoding.CodePages.xml",
         "lib/xamarinios10/_._",
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
         "runtimes/win/lib/net461/System.Text.Encoding.CodePages.dll",
-        "runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.dll",
-        "runtimes/win/lib/netstandard1.3/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/net461/System.Text.Encoding.CodePages.xml",
+        "runtimes/win/lib/net6.0/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/net6.0/System.Text.Encoding.CodePages.xml",
+        "runtimes/win/lib/netcoreapp3.1/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/netcoreapp3.1/System.Text.Encoding.CodePages.xml",
         "runtimes/win/lib/netstandard2.0/System.Text.Encoding.CodePages.dll",
-        "system.text.encoding.codepages.4.5.1.nupkg.sha512",
+        "runtimes/win/lib/netstandard2.0/System.Text.Encoding.CodePages.xml",
+        "system.text.encoding.codepages.6.0.0.nupkg.sha512",
         "system.text.encoding.codepages.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
+        "useSharedDesignerContext.txt"
       ]
     },
     "System.Text.Encodings.Web/6.0.0": {
@@ -6937,10 +7233,10 @@
         "uipath.documentunderstanding.digitizer.nuspec"
       ]
     },
-    "UiPath.Excel.Activities/2.11.4": {
-      "sha512": "PYSWoOW7ftcjeUE2m1e+gNFNuYrrKQN3tygoDbNVFsQYyJPIe2YnhHO7kW+Svn0NlLO91APHzNKKGkiD+L8FrA==",
+    "UiPath.Excel.Activities/2.22.3": {
+      "sha512": "LBAn2iRu7QrjGlL0gO0BV3tZTuJeTcgyZZ8efa17VMgrQC21gUewRP+2DUOxmMGiZqvf4XmD1BDFpYZIFPUKAA==",
       "type": "package",
-      "path": "uipath.excel.activities/2.11.4",
+      "path": "uipath.excel.activities/2.22.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -6984,47 +7280,80 @@
         "lib/net461/zh-CN/UiPath.Excel.Activities.Design.resources.dll",
         "lib/net461/zh-CN/UiPath.Excel.Activities.resources.dll",
         "lib/net461/zh-CN/UiPath.Excel.resources.dll",
-        "lib/net5.0-windows7.0/Microsoft.Office.Interop.Excel.dll",
-        "lib/net5.0-windows7.0/Microsoft.Vbe.Interop.dll",
-        "lib/net5.0-windows7.0/Office.dll",
-        "lib/net5.0-windows7.0/UiPath.Excel.Activities.Design.dll",
-        "lib/net5.0-windows7.0/UiPath.Excel.Activities.Package.dll",
-        "lib/net5.0-windows7.0/UiPath.Excel.Activities.dll",
-        "lib/net5.0-windows7.0/UiPath.Excel.dll",
-        "lib/net5.0-windows7.0/de/UiPath.Excel.Activities.Design.resources.dll",
-        "lib/net5.0-windows7.0/de/UiPath.Excel.Activities.resources.dll",
-        "lib/net5.0-windows7.0/de/UiPath.Excel.resources.dll",
-        "lib/net5.0-windows7.0/es-MX/UiPath.Excel.Activities.Design.resources.dll",
-        "lib/net5.0-windows7.0/es-MX/UiPath.Excel.Activities.resources.dll",
-        "lib/net5.0-windows7.0/es-MX/UiPath.Excel.resources.dll",
-        "lib/net5.0-windows7.0/es/UiPath.Excel.Activities.Design.resources.dll",
-        "lib/net5.0-windows7.0/es/UiPath.Excel.Activities.resources.dll",
-        "lib/net5.0-windows7.0/es/UiPath.Excel.resources.dll",
-        "lib/net5.0-windows7.0/fr/UiPath.Excel.Activities.Design.resources.dll",
-        "lib/net5.0-windows7.0/fr/UiPath.Excel.Activities.resources.dll",
-        "lib/net5.0-windows7.0/fr/UiPath.Excel.resources.dll",
-        "lib/net5.0-windows7.0/ja/UiPath.Excel.Activities.Design.resources.dll",
-        "lib/net5.0-windows7.0/ja/UiPath.Excel.Activities.resources.dll",
-        "lib/net5.0-windows7.0/ja/UiPath.Excel.resources.dll",
-        "lib/net5.0-windows7.0/ko/UiPath.Excel.Activities.Design.resources.dll",
-        "lib/net5.0-windows7.0/ko/UiPath.Excel.Activities.resources.dll",
-        "lib/net5.0-windows7.0/ko/UiPath.Excel.resources.dll",
-        "lib/net5.0-windows7.0/pt-BR/UiPath.Excel.Activities.Design.resources.dll",
-        "lib/net5.0-windows7.0/pt-BR/UiPath.Excel.Activities.resources.dll",
-        "lib/net5.0-windows7.0/pt-BR/UiPath.Excel.resources.dll",
-        "lib/net5.0-windows7.0/pt/UiPath.Excel.Activities.Design.resources.dll",
-        "lib/net5.0-windows7.0/pt/UiPath.Excel.Activities.resources.dll",
-        "lib/net5.0-windows7.0/pt/UiPath.Excel.resources.dll",
-        "lib/net5.0-windows7.0/ru/UiPath.Excel.Activities.Design.resources.dll",
-        "lib/net5.0-windows7.0/ru/UiPath.Excel.Activities.resources.dll",
-        "lib/net5.0-windows7.0/ru/UiPath.Excel.resources.dll",
-        "lib/net5.0-windows7.0/tr/UiPath.Excel.Activities.Design.resources.dll",
-        "lib/net5.0-windows7.0/tr/UiPath.Excel.Activities.resources.dll",
-        "lib/net5.0-windows7.0/tr/UiPath.Excel.resources.dll",
-        "lib/net5.0-windows7.0/zh-CN/UiPath.Excel.Activities.Design.resources.dll",
-        "lib/net5.0-windows7.0/zh-CN/UiPath.Excel.Activities.resources.dll",
-        "lib/net5.0-windows7.0/zh-CN/UiPath.Excel.resources.dll",
-        "uipath.excel.activities.2.11.4.nupkg.sha512",
+        "lib/net461/zh-TW/UiPath.Excel.Activities.Design.resources.dll",
+        "lib/net461/zh-TW/UiPath.Excel.Activities.resources.dll",
+        "lib/net461/zh-TW/UiPath.Excel.resources.dll",
+        "lib/net6.0-windows7.0/Microsoft.Office.Interop.Excel.dll",
+        "lib/net6.0-windows7.0/Microsoft.Vbe.Interop.dll",
+        "lib/net6.0-windows7.0/Office.dll",
+        "lib/net6.0-windows7.0/UiPath.Excel.Activities.Design.dll",
+        "lib/net6.0-windows7.0/UiPath.Excel.Activities.Package.dll",
+        "lib/net6.0-windows7.0/UiPath.Excel.Activities.dll",
+        "lib/net6.0-windows7.0/UiPath.Excel.dll",
+        "lib/net6.0-windows7.0/de/UiPath.Excel.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/de/UiPath.Excel.Activities.resources.dll",
+        "lib/net6.0-windows7.0/de/UiPath.Excel.resources.dll",
+        "lib/net6.0-windows7.0/es-MX/UiPath.Excel.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/es-MX/UiPath.Excel.Activities.resources.dll",
+        "lib/net6.0-windows7.0/es-MX/UiPath.Excel.resources.dll",
+        "lib/net6.0-windows7.0/es/UiPath.Excel.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/es/UiPath.Excel.Activities.resources.dll",
+        "lib/net6.0-windows7.0/es/UiPath.Excel.resources.dll",
+        "lib/net6.0-windows7.0/fr/UiPath.Excel.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/fr/UiPath.Excel.Activities.resources.dll",
+        "lib/net6.0-windows7.0/fr/UiPath.Excel.resources.dll",
+        "lib/net6.0-windows7.0/ja/UiPath.Excel.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/ja/UiPath.Excel.Activities.resources.dll",
+        "lib/net6.0-windows7.0/ja/UiPath.Excel.resources.dll",
+        "lib/net6.0-windows7.0/ko/UiPath.Excel.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/ko/UiPath.Excel.Activities.resources.dll",
+        "lib/net6.0-windows7.0/ko/UiPath.Excel.resources.dll",
+        "lib/net6.0-windows7.0/pt-BR/UiPath.Excel.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/pt-BR/UiPath.Excel.Activities.resources.dll",
+        "lib/net6.0-windows7.0/pt-BR/UiPath.Excel.resources.dll",
+        "lib/net6.0-windows7.0/pt/UiPath.Excel.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/pt/UiPath.Excel.Activities.resources.dll",
+        "lib/net6.0-windows7.0/pt/UiPath.Excel.resources.dll",
+        "lib/net6.0-windows7.0/ru/UiPath.Excel.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/ru/UiPath.Excel.Activities.resources.dll",
+        "lib/net6.0-windows7.0/ru/UiPath.Excel.resources.dll",
+        "lib/net6.0-windows7.0/tr/UiPath.Excel.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/tr/UiPath.Excel.Activities.resources.dll",
+        "lib/net6.0-windows7.0/tr/UiPath.Excel.resources.dll",
+        "lib/net6.0-windows7.0/zh-CN/UiPath.Excel.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/zh-CN/UiPath.Excel.Activities.resources.dll",
+        "lib/net6.0-windows7.0/zh-CN/UiPath.Excel.resources.dll",
+        "lib/net6.0-windows7.0/zh-TW/UiPath.Excel.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/zh-TW/UiPath.Excel.Activities.resources.dll",
+        "lib/net6.0-windows7.0/zh-TW/UiPath.Excel.resources.dll",
+        "lib/net6.0/UiPath.Excel.Activities.Package.dll",
+        "lib/net6.0/UiPath.Excel.Activities.dll",
+        "lib/net6.0/UiPath.Excel.dll",
+        "lib/net6.0/de/UiPath.Excel.Activities.resources.dll",
+        "lib/net6.0/de/UiPath.Excel.resources.dll",
+        "lib/net6.0/es-MX/UiPath.Excel.Activities.resources.dll",
+        "lib/net6.0/es-MX/UiPath.Excel.resources.dll",
+        "lib/net6.0/es/UiPath.Excel.Activities.resources.dll",
+        "lib/net6.0/es/UiPath.Excel.resources.dll",
+        "lib/net6.0/fr/UiPath.Excel.Activities.resources.dll",
+        "lib/net6.0/fr/UiPath.Excel.resources.dll",
+        "lib/net6.0/ja/UiPath.Excel.Activities.resources.dll",
+        "lib/net6.0/ja/UiPath.Excel.resources.dll",
+        "lib/net6.0/ko/UiPath.Excel.Activities.resources.dll",
+        "lib/net6.0/ko/UiPath.Excel.resources.dll",
+        "lib/net6.0/pt-BR/UiPath.Excel.Activities.resources.dll",
+        "lib/net6.0/pt-BR/UiPath.Excel.resources.dll",
+        "lib/net6.0/pt/UiPath.Excel.Activities.resources.dll",
+        "lib/net6.0/pt/UiPath.Excel.resources.dll",
+        "lib/net6.0/ru/UiPath.Excel.Activities.resources.dll",
+        "lib/net6.0/ru/UiPath.Excel.resources.dll",
+        "lib/net6.0/tr/UiPath.Excel.Activities.resources.dll",
+        "lib/net6.0/tr/UiPath.Excel.resources.dll",
+        "lib/net6.0/zh-CN/UiPath.Excel.Activities.resources.dll",
+        "lib/net6.0/zh-CN/UiPath.Excel.resources.dll",
+        "lib/net6.0/zh-TW/UiPath.Excel.Activities.resources.dll",
+        "lib/net6.0/zh-TW/UiPath.Excel.resources.dll",
+        "uipath.excel.activities.2.22.3.nupkg.sha512",
         "uipath.excel.activities.nuspec"
       ]
     },
@@ -7652,17 +7981,53 @@
         "uipath.pdf.activities.nuspec"
       ]
     },
-    "UiPath.Platform/21.10.0": {
-      "sha512": "JbO7cYshe3WCX8zZBi7nttObN0nZ8wvKAsRFiDskgvbhARLZbviTnlsniyu2uXeRi8941DCXKYCLKls0fOLaTQ==",
+    "UiPath.Platform/23.10.0": {
+      "sha512": "9tweZGj1eN51+N8e7rEz4S5FHqZ7P2HuFP9YzqGcj7sRBD8JK9z0g56QqsBeorWgeVVz/vNpiLRWZpzejsX8nA==",
       "type": "package",
-      "path": "uipath.platform/21.10.0",
+      "path": "uipath.platform/23.10.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/net461/UiPath.Platform.dll",
-        "lib/net5.0-windows7.0/UiPath.Platform.dll",
-        "lib/net5.0/UiPath.Platform.dll",
-        "uipath.platform.21.10.0.nupkg.sha512",
+        "lib/net461/UiPath.Platform.xml",
+        "lib/net461/de/UiPath.Platform.resources.dll",
+        "lib/net461/es-MX/UiPath.Platform.resources.dll",
+        "lib/net461/es/UiPath.Platform.resources.dll",
+        "lib/net461/fr/UiPath.Platform.resources.dll",
+        "lib/net461/ja/UiPath.Platform.resources.dll",
+        "lib/net461/ko/UiPath.Platform.resources.dll",
+        "lib/net461/pt-BR/UiPath.Platform.resources.dll",
+        "lib/net461/pt/UiPath.Platform.resources.dll",
+        "lib/net461/ru/UiPath.Platform.resources.dll",
+        "lib/net461/tr/UiPath.Platform.resources.dll",
+        "lib/net461/zh-CN/UiPath.Platform.resources.dll",
+        "lib/net6.0-windows7.0/UiPath.Platform.dll",
+        "lib/net6.0-windows7.0/UiPath.Platform.xml",
+        "lib/net6.0-windows7.0/de/UiPath.Platform.resources.dll",
+        "lib/net6.0-windows7.0/es-MX/UiPath.Platform.resources.dll",
+        "lib/net6.0-windows7.0/es/UiPath.Platform.resources.dll",
+        "lib/net6.0-windows7.0/fr/UiPath.Platform.resources.dll",
+        "lib/net6.0-windows7.0/ja/UiPath.Platform.resources.dll",
+        "lib/net6.0-windows7.0/ko/UiPath.Platform.resources.dll",
+        "lib/net6.0-windows7.0/pt-BR/UiPath.Platform.resources.dll",
+        "lib/net6.0-windows7.0/pt/UiPath.Platform.resources.dll",
+        "lib/net6.0-windows7.0/ru/UiPath.Platform.resources.dll",
+        "lib/net6.0-windows7.0/tr/UiPath.Platform.resources.dll",
+        "lib/net6.0-windows7.0/zh-CN/UiPath.Platform.resources.dll",
+        "lib/net6.0/UiPath.Platform.dll",
+        "lib/net6.0/UiPath.Platform.xml",
+        "lib/net6.0/de/UiPath.Platform.resources.dll",
+        "lib/net6.0/es-MX/UiPath.Platform.resources.dll",
+        "lib/net6.0/es/UiPath.Platform.resources.dll",
+        "lib/net6.0/fr/UiPath.Platform.resources.dll",
+        "lib/net6.0/ja/UiPath.Platform.resources.dll",
+        "lib/net6.0/ko/UiPath.Platform.resources.dll",
+        "lib/net6.0/pt-BR/UiPath.Platform.resources.dll",
+        "lib/net6.0/pt/UiPath.Platform.resources.dll",
+        "lib/net6.0/ru/UiPath.Platform.resources.dll",
+        "lib/net6.0/tr/UiPath.Platform.resources.dll",
+        "lib/net6.0/zh-CN/UiPath.Platform.resources.dll",
+        "uipath.platform.23.10.0.nupkg.sha512",
         "uipath.platform.nuspec"
       ]
     },
@@ -7753,17 +8118,17 @@
         "uipath.system.activities.nuspec"
       ]
     },
-    "UiPath.Telemetry.Client/1.5.3": {
-      "sha512": "voH5VhBF+xnecfzkaaxQPKyoSfUFqvYhYp2XpLbxE6boX2fXvwpQHM1li94d+WLu20ayT+5Vb/frLpjd6nMQsA==",
+    "UiPath.Telemetry.Client/1.6.69": {
+      "sha512": "WVZS1Uo7WVXOacqE1RXcrbvYhpYOzw+6QYfyEvGpTHm3hQe658DSCMK6Pk/Fxfp6nLq26okg1kd0/ycBfhf3sw==",
       "type": "package",
-      "path": "uipath.telemetry.client/1.5.3",
+      "path": "uipath.telemetry.client/1.6.69",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "UI_icon.png",
         "lib/net461/TelemetryClient.dll",
         "lib/netstandard2.0/TelemetryClient.dll",
-        "uipath.telemetry.client.1.5.3.nupkg.sha512",
+        "uipath.telemetry.client.1.6.69.nupkg.sha512",
         "uipath.telemetry.client.nuspec"
       ]
     },
@@ -8235,7 +8600,7 @@
   "projectFileDependencyGroups": {
     "": [],
     ".NETFramework,Version=v4.6.1": [
-      "UiPath.Excel.Activities >= 2.11.4 <= 2.11.4",
+      "UiPath.Excel.Activities >= 2.22.3 <= 2.22.3",
       "UiPath.Mail.Activities >= 1.12.3 <= 1.12.3",
       "UiPath.PDF.Activities >= 3.16.0 <= 3.16.0",
       "UiPath.System.Activities >= 21.10.5 <= 21.10.5",
@@ -8259,7 +8624,7 @@
           "UiPath.Excel.Activities": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[2.11.4, 2.11.4]"
+            "version": "[2.22.3, 2.22.3]"
           },
           "UiPath.Mail.Activities": {
             "include": "Runtime",

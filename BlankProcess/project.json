@@ -3,7 +3,7 @@
   "description": "Praxisaufgbae",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.Excel.Activities": "[2.11.4]",
+    "UiPath.Excel.Activities": "[2.22.3]",
     "UiPath.Mail.Activities": "[1.12.3]",
     "UiPath.PDF.Activities": "[3.16.0]",
     "UiPath.System.Activities": "[21.10.5]",
