@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "LPyu8tk3cQxLU5QT6ZeqNT35lYpmmWwr0yCwjT1usN/zyVuL1paEaYYm2S5sFCLOCElr5kmE7KIi25P8tHRnjA==",
+  "dgSpecHash": "q+Xx8nd3JG2N9XEnAeL7XMX9s9mcKOoDibyYETcTzge256auUcmLY9yz/5JCxScQKPYI8F/2y6bcW7s9dxGxeQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\alexa\\OneDrive - FH Graubünden\\6. Semester\\02_RPA\\rpa-project\\BlankProcess\\.local\\",
   "expectedPackageFiles": [
@@ -18,7 +18,7 @@
     "C:\\Users\\alexa\\.nuget\\packages\\google.apis.gmail.v1\\1.51.0.2251\\google.apis.gmail.v1.1.51.0.2251.nupkg.sha512",
     "C:\\Users\\alexa\\.nuget\\packages\\google.apis.peopleservice.v1\\1.51.0.2301\\google.apis.peopleservice.v1.1.51.0.2301.nupkg.sha512",
     "C:\\Users\\alexa\\.nuget\\packages\\ikava.dataservice.activities\\2.0.1\\ikava.dataservice.activities.2.0.1.nupkg.sha512",
-    "C:\\Users\\alexa\\.nuget\\packages\\ikava.dataservice.projects.rpainvoicecollector\\0.0.0\\ikava.dataservice.projects.rpainvoicecollector.0.0.0.nupkg.sha512",
+    "C:\\Users\\alexa\\.nuget\\packages\\ikava.dataservice.projects.rpainvoicecollector\\0.0.3\\ikava.dataservice.projects.rpainvoicecollector.0.0.3.nupkg.sha512",
     "C:\\Users\\alexa\\.nuget\\packages\\mailkit\\2.10.0\\mailkit.2.10.0.nupkg.sha512",
     "C:\\Users\\alexa\\.nuget\\packages\\markdig.signed\\0.21.1\\markdig.signed.0.21.1.nupkg.sha512",
     "C:\\Users\\alexa\\.nuget\\packages\\microsoft.applicationinsights\\2.15.0\\microsoft.applicationinsights.2.15.0.nupkg.sha512",
