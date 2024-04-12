@@ -238,18 +238,18 @@
     {
       "Package": {
         "Id": "IKAVA.DataService.Projects.RPAInvoiceCollector",
-        "Version": "0.0.3"
+        "Version": "0.0.4"
       },
       "Assemblies": [
         "C:\\Users\\alexa\\.nuget\\packages\\dnsclient/1.4.0\\lib/netstandard2.1/DnsClient.dll",
-        "C:\\Users\\alexa\\.nuget\\packages\\ikava.dataservice.projects.rpainvoicecollector/0.0.3\\lib/net6.0-windows7.0/IKAVA.DataService.Projects.RPAInvoiceCollector.dll",
+        "C:\\Users\\alexa\\.nuget\\packages\\ikava.dataservice.projects.rpainvoicecollector/0.0.4\\lib/net6.0-windows7.0/IKAVA.DataService.Projects.RPAInvoiceCollector.dll",
         "C:\\Users\\alexa\\.nuget\\packages\\mongodb.bson/2.13.3\\lib/netstandard2.1/MongoDB.Bson.dll",
         "C:\\Users\\alexa\\.nuget\\packages\\mongodb.driver/2.13.3\\lib/netstandard2.1/MongoDB.Driver.dll",
         "C:\\Users\\alexa\\.nuget\\packages\\mongodb.driver.core/2.13.3\\lib/netstandard2.1/MongoDB.Driver.Core.dll",
         "C:\\Users\\alexa\\.nuget\\packages\\mongodb.libmongocrypt/1.2.2\\lib/netstandard2.1/MongoDB.Libmongocrypt.dll",
         "C:\\Users\\alexa\\.nuget\\packages\\sharpcompress/0.23.0\\lib/netstandard2.0/SharpCompress.dll"
       ],
-      "Path": "C:\\Users\\alexa\\.nuget\\packages\\ikava.dataservice.projects.rpainvoicecollector\\0.0.3"
+      "Path": "C:\\Users\\alexa\\.nuget\\packages\\ikava.dataservice.projects.rpainvoicecollector\\0.0.4"
     }
   ],
   "Conflicts": [],
@@ -408,7 +408,7 @@
     },
     "IKAVA.DataService.Projects.RPAInvoiceCollector": {
       "Id": "IKAVA.DataService.Projects.RPAInvoiceCollector",
-      "Version": "0.0.3",
+      "Version": "0.0.4",
       "Dependencies": [
         {
           "Item1": "MongoDB.Bson",
@@ -4768,12 +4768,12 @@
     {
       "Package": {
         "Id": "IKAVA.DataService.Projects.RPAInvoiceCollector",
-        "Version": "0.0.3"
+        "Version": "0.0.4"
       },
       "Assemblies": [
-        "C:\\Users\\alexa\\.nuget\\packages\\ikava.dataservice.projects.rpainvoicecollector\\0.0.3\\lib\\net6.0-windows7.0\\IKAVA.DataService.Projects.RPAInvoiceCollector.dll"
+        "C:\\Users\\alexa\\.nuget\\packages\\ikava.dataservice.projects.rpainvoicecollector\\0.0.4\\lib\\net6.0-windows7.0\\IKAVA.DataService.Projects.RPAInvoiceCollector.dll"
       ],
-      "Path": "C:\\Users\\alexa\\.nuget\\packages\\ikava.dataservice.projects.rpainvoicecollector\\0.0.3"
+      "Path": "C:\\Users\\alexa\\.nuget\\packages\\ikava.dataservice.projects.rpainvoicecollector\\0.0.4"
     },
     {
       "Package": {

@@ -173,7 +173,7 @@
           "Microsoft.WindowsDesktop.App.WPF"
         ]
       },
-      "IKAVA.DataService.Projects.RPAInvoiceCollector/0.0.3": {
+      "IKAVA.DataService.Projects.RPAInvoiceCollector/0.0.4": {
         "type": "package",
         "dependencies": {
           "MongoDB.Bson": "2.13.3",
@@ -4726,7 +4726,7 @@
           "Microsoft.WindowsDesktop.App.WPF"
         ]
       },
-      "IKAVA.DataService.Projects.RPAInvoiceCollector/0.0.3": {
+      "IKAVA.DataService.Projects.RPAInvoiceCollector/0.0.4": {
         "type": "package",
         "dependencies": {
           "MongoDB.Bson": "2.13.3",
@@ -9281,13 +9281,13 @@
         "packageIcon.png"
       ]
     },
-    "IKAVA.DataService.Projects.RPAInvoiceCollector/0.0.3": {
-      "sha512": "CYgF/8f9ChMcz/mW8RgK3f0aftGkEVVph+A4ZudVg0GzFdHrN0lebQrV83iBv2bbu4780R18UMYwKAaym5LXSA==",
+    "IKAVA.DataService.Projects.RPAInvoiceCollector/0.0.4": {
+      "sha512": "C75L6Q3sIAav39pUUGumc5HTia6iowsFlF/wl7LemdbgyCWvUseYh7LJicXEy0yVRzm6sn0VpcdKbLp3inYMZQ==",
       "type": "package",
-      "path": "ikava.dataservice.projects.rpainvoicecollector/0.0.3",
+      "path": "ikava.dataservice.projects.rpainvoicecollector/0.0.4",
       "files": [
         ".nupkg.metadata",
-        "ikava.dataservice.projects.rpainvoicecollector.0.0.3.nupkg.sha512",
+        "ikava.dataservice.projects.rpainvoicecollector.0.0.4.nupkg.sha512",
         "ikava.dataservice.projects.rpainvoicecollector.nuspec",
         "lib/net461/IKAVA.DataService.Projects.RPAInvoiceCollector.dll",
         "lib/net6.0-windows7.0/IKAVA.DataService.Projects.RPAInvoiceCollector.dll"
@@ -18795,7 +18795,7 @@
     "": [],
     "net6.0-windows7.0": [
       "IKAVA.DataService.Activities >= 2.0.1 <= 2.0.1",
-      "IKAVA.DataService.Projects.RPAInvoiceCollector >= 0.0.3 <= 0.0.3",
+      "IKAVA.DataService.Projects.RPAInvoiceCollector >= 0.0.4 <= 0.0.4",
       "UiPath.Excel.Activities >= 2.22.3 <= 2.22.3",
       "UiPath.Mail.Activities >= 1.12.3 <= 1.12.3",
       "UiPath.PDF.Activities >= 3.16.0 <= 3.16.0",
@@ -18825,7 +18825,7 @@
           "IKAVA.DataService.Projects.RPAInvoiceCollector": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[0.0.3, 0.0.3]"
+            "version": "[0.0.4, 0.0.4]"
           },
           "UiPath.Excel.Activities": {
             "include": "Runtime",
