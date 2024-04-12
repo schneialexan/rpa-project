@@ -3,6 +3,8 @@
   "description": "Praxisaufgbae",
   "main": "Main.xaml",
   "dependencies": {
+    "IKAVA.DataService.Activities": "[2.0.1]",
+    "IKAVA.DataService.Projects.RPAInvoiceCollector": "[0.0.0]",
     "UiPath.Excel.Activities": "[2.22.3]",
     "UiPath.Mail.Activities": "[1.12.3]",
     "UiPath.PDF.Activities": "[3.16.0]",
@@ -55,5 +57,5 @@
   "isTemplate": false,
   "templateProjectData": {},
   "publishData": {},
-  "targetFramework": "Legacy"
+  "targetFramework": "Windows"
 }
