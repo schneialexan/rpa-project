@@ -8,14 +8,16 @@
     "UiPath.Excel.Activities": "[2.22.3]",
     "UiPath.Mail.Activities": "[1.12.3]",
     "UiPath.PDF.Activities": "[3.16.0]",
+    "UiPath.Python.Activities": "[1.8.0]",
     "UiPath.System.Activities": "[21.10.5]",
-    "UiPath.UIAutomation.Activities": "[21.10.6]"
+    "UiPath.UIAutomation.Activities": "[21.10.6]",
+    "UiPath.WebAPI.Activities": "[1.18.0]"
   },
   "webServices": [],
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "21.10.7.0",
-  "projectVersion": "1.0.0",
+  "projectVersion": "1.0.1",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -44,6 +46,10 @@
     },
     "fileInfoCollection": [],
     "modernBehavior": false
+  },
+  "arguments": {
+    "input": [],
+    "output": []
   },
   "expressionLanguage": "VisualBasic",
   "entryPoints": [

@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     "net6.0-windows7.0": {
+      "AvalonEdit/6.1.3.50": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-windows7.0/_._": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/ICSharpCode.AvalonEdit.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App"
+        ]
+      },
       "BitMiracle.Docotic.Pdf/8.8.14512-dev": {
         "type": "package",
         "compile": {
@@ -1517,6 +1529,15 @@
         },
         "runtime": {
           "lib/netstandard2.0/BouncyCastle.Crypto.dll": {}
+        }
+      },
+      "RestSharp/106.15.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/RestSharp.dll": {}
         }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
@@ -4132,6 +4153,127 @@
           }
         }
       },
+      "UiPath.Python.Activities/1.8.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-windows7.0/_._": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/UiPath.Python.Activities.Design.dll": {},
+          "lib/net6.0-windows7.0/UiPath.Python.Activities.dll": {},
+          "lib/net6.0-windows7.0/UiPath.Python.dll": {}
+        },
+        "resource": {
+          "lib/net6.0-windows7.0/de/UiPath.Python.Activities.Design.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net6.0-windows7.0/de/UiPath.Python.Activities.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net6.0-windows7.0/de/UiPath.Python.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net6.0-windows7.0/es-MX/UiPath.Python.Activities.Design.resources.dll": {
+            "locale": "es-MX"
+          },
+          "lib/net6.0-windows7.0/es-MX/UiPath.Python.Activities.resources.dll": {
+            "locale": "es-MX"
+          },
+          "lib/net6.0-windows7.0/es-MX/UiPath.Python.resources.dll": {
+            "locale": "es-MX"
+          },
+          "lib/net6.0-windows7.0/es/UiPath.Python.Activities.Design.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net6.0-windows7.0/es/UiPath.Python.Activities.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net6.0-windows7.0/es/UiPath.Python.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net6.0-windows7.0/fr/UiPath.Python.Activities.Design.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net6.0-windows7.0/fr/UiPath.Python.Activities.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net6.0-windows7.0/fr/UiPath.Python.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net6.0-windows7.0/ja/UiPath.Python.Activities.Design.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net6.0-windows7.0/ja/UiPath.Python.Activities.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net6.0-windows7.0/ja/UiPath.Python.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net6.0-windows7.0/ko/UiPath.Python.Activities.Design.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net6.0-windows7.0/ko/UiPath.Python.Activities.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net6.0-windows7.0/ko/UiPath.Python.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net6.0-windows7.0/pt-BR/UiPath.Python.Activities.Design.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net6.0-windows7.0/pt-BR/UiPath.Python.Activities.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net6.0-windows7.0/pt-BR/UiPath.Python.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net6.0-windows7.0/pt/UiPath.Python.Activities.Design.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net6.0-windows7.0/pt/UiPath.Python.Activities.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net6.0-windows7.0/pt/UiPath.Python.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net6.0-windows7.0/ru/UiPath.Python.Activities.Design.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net6.0-windows7.0/ru/UiPath.Python.Activities.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net6.0-windows7.0/ru/UiPath.Python.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net6.0-windows7.0/tr/UiPath.Python.Activities.Design.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net6.0-windows7.0/tr/UiPath.Python.Activities.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net6.0-windows7.0/tr/UiPath.Python.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net6.0-windows7.0/zh-CN/UiPath.Python.Activities.Design.resources.dll": {
+            "locale": "zh-CN"
+          },
+          "lib/net6.0-windows7.0/zh-CN/UiPath.Python.Activities.resources.dll": {
+            "locale": "zh-CN"
+          },
+          "lib/net6.0-windows7.0/zh-CN/UiPath.Python.resources.dll": {
+            "locale": "zh-CN"
+          },
+          "lib/net6.0-windows7.0/zh-TW/UiPath.Python.Activities.Design.resources.dll": {
+            "locale": "zh-TW"
+          },
+          "lib/net6.0-windows7.0/zh-TW/UiPath.Python.Activities.resources.dll": {
+            "locale": "zh-TW"
+          },
+          "lib/net6.0-windows7.0/zh-TW/UiPath.Python.resources.dll": {
+            "locale": "zh-TW"
+          }
+        }
+      },
       "UiPath.System.Activities/21.10.5": {
         "type": "package",
         "dependencies": {
@@ -4552,9 +4694,131 @@
           "lib/net5.0-windows7.0/UiPath.Vision.Tesseract.dll": {},
           "lib/net5.0-windows7.0/UiPath.Vision.dll": {}
         }
+      },
+      "UiPath.WebAPI.Activities/1.18.0": {
+        "type": "package",
+        "dependencies": {
+          "AvalonEdit": "6.1.3.50",
+          "Microsoft.CSharp": "4.7.0",
+          "Newtonsoft.Json": "13.0.1",
+          "RestSharp": "106.15.0",
+          "UiPath.Platform": "23.4.1",
+          "UiPath.WebAPI.Runtime": "1.18.0"
+        },
+        "compile": {
+          "lib/net6.0-windows7.0/_._": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/UiPath.Web.Activities.Design.dll": {},
+          "lib/net6.0-windows7.0/UiPath.Web.Activities.RulesLibrary.dll": {}
+        },
+        "resource": {
+          "lib/net6.0-windows7.0/de/UiPath.Web.Activities.Design.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net6.0-windows7.0/es-MX/UiPath.Web.Activities.Design.resources.dll": {
+            "locale": "es-MX"
+          },
+          "lib/net6.0-windows7.0/es/UiPath.Web.Activities.Design.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net6.0-windows7.0/fr/UiPath.Web.Activities.Design.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net6.0-windows7.0/ja/UiPath.Web.Activities.Design.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net6.0-windows7.0/ko/UiPath.Web.Activities.Design.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net6.0-windows7.0/pt-BR/UiPath.Web.Activities.Design.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net6.0-windows7.0/pt/UiPath.Web.Activities.Design.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net6.0-windows7.0/ru/UiPath.Web.Activities.Design.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net6.0-windows7.0/tr/UiPath.Web.Activities.Design.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net6.0-windows7.0/zh-CN/UiPath.Web.Activities.Design.resources.dll": {
+            "locale": "zh-CN"
+          },
+          "lib/net6.0-windows7.0/zu/UiPath.Web.Activities.Design.resources.dll": {
+            "locale": "zu"
+          }
+        }
+      },
+      "UiPath.WebAPI.Runtime/1.18.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0",
+          "Newtonsoft.Json": "13.0.1",
+          "RestSharp": "106.15.0",
+          "UiPath.Platform": "23.4.1"
+        },
+        "compile": {
+          "lib/net6.0-windows7.0/_._": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/UiPath.Web.Activities.dll": {},
+          "lib/net6.0-windows7.0/UiPath.Web.dll": {}
+        },
+        "resource": {
+          "lib/net6.0-windows7.0/de/UiPath.Web.Activities.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net6.0-windows7.0/es-MX/UiPath.Web.Activities.resources.dll": {
+            "locale": "es-MX"
+          },
+          "lib/net6.0-windows7.0/es/UiPath.Web.Activities.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net6.0-windows7.0/fr/UiPath.Web.Activities.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net6.0-windows7.0/ja/UiPath.Web.Activities.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net6.0-windows7.0/ko/UiPath.Web.Activities.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net6.0-windows7.0/pt-BR/UiPath.Web.Activities.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net6.0-windows7.0/pt/UiPath.Web.Activities.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net6.0-windows7.0/ru/UiPath.Web.Activities.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net6.0-windows7.0/tr/UiPath.Web.Activities.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net6.0-windows7.0/zh-CN/UiPath.Web.Activities.resources.dll": {
+            "locale": "zh-CN"
+          },
+          "lib/net6.0-windows7.0/zu/UiPath.Web.Activities.resources.dll": {
+            "locale": "zu"
+          }
+        }
       }
     },
     "net6.0-windows7.0/win10-x64": {
+      "AvalonEdit/6.1.3.50": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-windows7.0/_._": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/ICSharpCode.AvalonEdit.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App"
+        ]
+      },
       "BitMiracle.Docotic.Pdf/8.8.14512-dev": {
         "type": "package",
         "compile": {
@@ -5902,6 +6166,15 @@
         },
         "runtime": {
           "lib/netstandard2.0/BouncyCastle.Crypto.dll": {}
+        }
+      },
+      "RestSharp/106.15.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/RestSharp.dll": {}
         }
       },
       "runtime.any.System.Collections/4.3.0": {
@@ -8534,6 +8807,127 @@
           }
         }
       },
+      "UiPath.Python.Activities/1.8.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-windows7.0/_._": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/UiPath.Python.Activities.Design.dll": {},
+          "lib/net6.0-windows7.0/UiPath.Python.Activities.dll": {},
+          "lib/net6.0-windows7.0/UiPath.Python.dll": {}
+        },
+        "resource": {
+          "lib/net6.0-windows7.0/de/UiPath.Python.Activities.Design.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net6.0-windows7.0/de/UiPath.Python.Activities.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net6.0-windows7.0/de/UiPath.Python.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net6.0-windows7.0/es-MX/UiPath.Python.Activities.Design.resources.dll": {
+            "locale": "es-MX"
+          },
+          "lib/net6.0-windows7.0/es-MX/UiPath.Python.Activities.resources.dll": {
+            "locale": "es-MX"
+          },
+          "lib/net6.0-windows7.0/es-MX/UiPath.Python.resources.dll": {
+            "locale": "es-MX"
+          },
+          "lib/net6.0-windows7.0/es/UiPath.Python.Activities.Design.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net6.0-windows7.0/es/UiPath.Python.Activities.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net6.0-windows7.0/es/UiPath.Python.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net6.0-windows7.0/fr/UiPath.Python.Activities.Design.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net6.0-windows7.0/fr/UiPath.Python.Activities.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net6.0-windows7.0/fr/UiPath.Python.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net6.0-windows7.0/ja/UiPath.Python.Activities.Design.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net6.0-windows7.0/ja/UiPath.Python.Activities.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net6.0-windows7.0/ja/UiPath.Python.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net6.0-windows7.0/ko/UiPath.Python.Activities.Design.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net6.0-windows7.0/ko/UiPath.Python.Activities.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net6.0-windows7.0/ko/UiPath.Python.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net6.0-windows7.0/pt-BR/UiPath.Python.Activities.Design.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net6.0-windows7.0/pt-BR/UiPath.Python.Activities.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net6.0-windows7.0/pt-BR/UiPath.Python.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net6.0-windows7.0/pt/UiPath.Python.Activities.Design.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net6.0-windows7.0/pt/UiPath.Python.Activities.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net6.0-windows7.0/pt/UiPath.Python.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net6.0-windows7.0/ru/UiPath.Python.Activities.Design.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net6.0-windows7.0/ru/UiPath.Python.Activities.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net6.0-windows7.0/ru/UiPath.Python.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net6.0-windows7.0/tr/UiPath.Python.Activities.Design.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net6.0-windows7.0/tr/UiPath.Python.Activities.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net6.0-windows7.0/tr/UiPath.Python.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net6.0-windows7.0/zh-CN/UiPath.Python.Activities.Design.resources.dll": {
+            "locale": "zh-CN"
+          },
+          "lib/net6.0-windows7.0/zh-CN/UiPath.Python.Activities.resources.dll": {
+            "locale": "zh-CN"
+          },
+          "lib/net6.0-windows7.0/zh-CN/UiPath.Python.resources.dll": {
+            "locale": "zh-CN"
+          },
+          "lib/net6.0-windows7.0/zh-TW/UiPath.Python.Activities.Design.resources.dll": {
+            "locale": "zh-TW"
+          },
+          "lib/net6.0-windows7.0/zh-TW/UiPath.Python.Activities.resources.dll": {
+            "locale": "zh-TW"
+          },
+          "lib/net6.0-windows7.0/zh-TW/UiPath.Python.resources.dll": {
+            "locale": "zh-TW"
+          }
+        }
+      },
       "UiPath.System.Activities/21.10.5": {
         "type": "package",
         "dependencies": {
@@ -8954,10 +9348,141 @@
           "lib/net5.0-windows7.0/UiPath.Vision.Tesseract.dll": {},
           "lib/net5.0-windows7.0/UiPath.Vision.dll": {}
         }
+      },
+      "UiPath.WebAPI.Activities/1.18.0": {
+        "type": "package",
+        "dependencies": {
+          "AvalonEdit": "6.1.3.50",
+          "Microsoft.CSharp": "4.7.0",
+          "Newtonsoft.Json": "13.0.1",
+          "RestSharp": "106.15.0",
+          "UiPath.Platform": "23.4.1",
+          "UiPath.WebAPI.Runtime": "1.18.0"
+        },
+        "compile": {
+          "lib/net6.0-windows7.0/_._": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/UiPath.Web.Activities.Design.dll": {},
+          "lib/net6.0-windows7.0/UiPath.Web.Activities.RulesLibrary.dll": {}
+        },
+        "resource": {
+          "lib/net6.0-windows7.0/de/UiPath.Web.Activities.Design.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net6.0-windows7.0/es-MX/UiPath.Web.Activities.Design.resources.dll": {
+            "locale": "es-MX"
+          },
+          "lib/net6.0-windows7.0/es/UiPath.Web.Activities.Design.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net6.0-windows7.0/fr/UiPath.Web.Activities.Design.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net6.0-windows7.0/ja/UiPath.Web.Activities.Design.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net6.0-windows7.0/ko/UiPath.Web.Activities.Design.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net6.0-windows7.0/pt-BR/UiPath.Web.Activities.Design.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net6.0-windows7.0/pt/UiPath.Web.Activities.Design.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net6.0-windows7.0/ru/UiPath.Web.Activities.Design.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net6.0-windows7.0/tr/UiPath.Web.Activities.Design.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net6.0-windows7.0/zh-CN/UiPath.Web.Activities.Design.resources.dll": {
+            "locale": "zh-CN"
+          },
+          "lib/net6.0-windows7.0/zu/UiPath.Web.Activities.Design.resources.dll": {
+            "locale": "zu"
+          }
+        }
+      },
+      "UiPath.WebAPI.Runtime/1.18.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0",
+          "Newtonsoft.Json": "13.0.1",
+          "RestSharp": "106.15.0",
+          "UiPath.Platform": "23.4.1"
+        },
+        "compile": {
+          "lib/net6.0-windows7.0/_._": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/UiPath.Web.Activities.dll": {},
+          "lib/net6.0-windows7.0/UiPath.Web.dll": {}
+        },
+        "resource": {
+          "lib/net6.0-windows7.0/de/UiPath.Web.Activities.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net6.0-windows7.0/es-MX/UiPath.Web.Activities.resources.dll": {
+            "locale": "es-MX"
+          },
+          "lib/net6.0-windows7.0/es/UiPath.Web.Activities.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net6.0-windows7.0/fr/UiPath.Web.Activities.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net6.0-windows7.0/ja/UiPath.Web.Activities.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net6.0-windows7.0/ko/UiPath.Web.Activities.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net6.0-windows7.0/pt-BR/UiPath.Web.Activities.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net6.0-windows7.0/pt/UiPath.Web.Activities.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net6.0-windows7.0/ru/UiPath.Web.Activities.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net6.0-windows7.0/tr/UiPath.Web.Activities.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net6.0-windows7.0/zh-CN/UiPath.Web.Activities.resources.dll": {
+            "locale": "zh-CN"
+          },
+          "lib/net6.0-windows7.0/zu/UiPath.Web.Activities.resources.dll": {
+            "locale": "zu"
+          }
+        }
       }
     }
   },
   "libraries": {
+    "AvalonEdit/6.1.3.50": {
+      "sha512": "PtR4iPGu965DMSaDs0RyGi1LK94kUwWIZUGx1Jpg5vJr52KKQPR+KMwIthcpgoQR6xJWKM2MkZ41setJXuzMWA==",
+      "type": "package",
+      "path": "avalonedit/6.1.3.50",
+      "files": [
+        ".nupkg.metadata",
+        "avalonedit.6.1.3.50.nupkg.sha512",
+        "avalonedit.nuspec",
+        "images/AvalonEditNuGetPackageIcon.png",
+        "lib/net40/ICSharpCode.AvalonEdit.dll",
+        "lib/net40/ICSharpCode.AvalonEdit.xml",
+        "lib/net45/ICSharpCode.AvalonEdit.dll",
+        "lib/net45/ICSharpCode.AvalonEdit.xml",
+        "lib/net5.0-windows7.0/ICSharpCode.AvalonEdit.dll",
+        "lib/net5.0-windows7.0/ICSharpCode.AvalonEdit.xml",
+        "lib/net6.0-windows7.0/ICSharpCode.AvalonEdit.dll",
+        "lib/net6.0-windows7.0/ICSharpCode.AvalonEdit.xml",
+        "lib/netcoreapp3.1/ICSharpCode.AvalonEdit.dll",
+        "lib/netcoreapp3.1/ICSharpCode.AvalonEdit.xml"
+      ]
+    },
     "BitMiracle.Docotic.Pdf/8.8.14512-dev": {
       "sha512": "HnHH1eFcM2nk+VlTFgu4ZO8vUhhh+wUobFjdpTkd2aX5vyZ1myJAAlgbY5XvEzKbj1QxBLII714NsGTKndZYYQ==",
       "type": "package",
@@ -11344,6 +11869,21 @@
         "lib/netstandard2.0/BouncyCastle.Crypto.xml",
         "portable.bouncycastle.1.8.9.nupkg.sha512",
         "portable.bouncycastle.nuspec"
+      ]
+    },
+    "RestSharp/106.15.0": {
+      "sha512": "HM7ohR6AscxedNenrrl93DSZG6hvdnA7O+NHyCl/6ZKTfn8psQ9rRmUpcb9eWr+140vmfxoVemql0bUoeGEW3A==",
+      "type": "package",
+      "path": "restsharp/106.15.0",
+      "files": [
+        ".nupkg.metadata",
+        "lib/net452/RestSharp.dll",
+        "lib/net452/RestSharp.xml",
+        "lib/netstandard2.0/RestSharp.dll",
+        "lib/netstandard2.0/RestSharp.xml",
+        "restsharp.106.15.0.nupkg.sha512",
+        "restsharp.nuspec",
+        "restsharp.png"
       ]
     },
     "runtime.any.System.Collections/4.3.0": {
@@ -18225,6 +18765,255 @@
         "uipath.platform.nuspec"
       ]
     },
+    "UiPath.Python.Activities/1.8.0": {
+      "sha512": "JKxGuBtOOkv/LfpLvLc/JMSKrDiV5x1vgjJkoKq42eEr189JY6/obbekc0bxiEAmX1TWZI+RFAe4u7t6ncb7ug==",
+      "type": "package",
+      "path": "uipath.python.activities/1.8.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "bin/net461/UiPath.Python.Host.exe",
+        "bin/net461/UiPath.Python.Host32.exe",
+        "bin/net461/UiPath.Python.dll",
+        "bin/net461/de/UiPath.Python.resources.dll",
+        "bin/net461/es-MX/UiPath.Python.resources.dll",
+        "bin/net461/es/UiPath.Python.resources.dll",
+        "bin/net461/ja/UiPath.Python.resources.dll",
+        "bin/net461/ko/UiPath.Python.resources.dll",
+        "bin/net461/pt-BR/UiPath.Python.resources.dll",
+        "bin/net461/pt/UiPath.Python.resources.dll",
+        "bin/net461/ru/UiPath.Python.resources.dll",
+        "bin/net461/tr/UiPath.Python.resources.dll",
+        "bin/net461/x64/Python.Runtime.27.dll",
+        "bin/net461/x64/Python.Runtime.34.dll",
+        "bin/net461/x64/Python.Runtime.35.dll",
+        "bin/net461/x64/Python.Runtime.36.dll",
+        "bin/net461/x64/Python.Runtime.37.dll",
+        "bin/net461/x64/Python.Runtime.38.dll",
+        "bin/net461/x64/Python.Runtime.39.dll",
+        "bin/net461/x64/Python.Runtime.Unix.dll",
+        "bin/net461/x64/Python.Runtime.dll",
+        "bin/net461/x86/Python.Runtime.27.dll",
+        "bin/net461/x86/Python.Runtime.34.dll",
+        "bin/net461/x86/Python.Runtime.35.dll",
+        "bin/net461/x86/Python.Runtime.36.dll",
+        "bin/net461/x86/Python.Runtime.37.dll",
+        "bin/net461/x86/Python.Runtime.38.dll",
+        "bin/net461/x86/Python.Runtime.39.dll",
+        "bin/net461/x86/Python.Runtime.dll",
+        "bin/net461/zh-CN/UiPath.Python.resources.dll",
+        "bin/net461/zh-TW/UiPath.Python.resources.dll",
+        "bin/net6.0-windows7.0/Microsoft.CodeAnalysis.CSharp.Scripting.dll",
+        "bin/net6.0-windows7.0/Microsoft.CodeAnalysis.CSharp.dll",
+        "bin/net6.0-windows7.0/Microsoft.CodeAnalysis.Scripting.dll",
+        "bin/net6.0-windows7.0/Microsoft.CodeAnalysis.VisualBasic.Scripting.dll",
+        "bin/net6.0-windows7.0/Microsoft.CodeAnalysis.VisualBasic.dll",
+        "bin/net6.0-windows7.0/Microsoft.CodeAnalysis.dll",
+        "bin/net6.0-windows7.0/Microsoft.PowerFx.Core.dll",
+        "bin/net6.0-windows7.0/Microsoft.PowerFx.Interpreter.dll",
+        "bin/net6.0-windows7.0/Microsoft.PowerFx.Transport.Attributes.dll",
+        "bin/net6.0-windows7.0/Nito.AsyncEx.Tasks.dll",
+        "bin/net6.0-windows7.0/Nito.Disposables.dll",
+        "bin/net6.0-windows7.0/ReflectionMagic.dll",
+        "bin/net6.0-windows7.0/System.Activities.dll",
+        "bin/net6.0-windows7.0/UiPath.Python.Activities.Design.dll",
+        "bin/net6.0-windows7.0/UiPath.Python.Activities.dll",
+        "bin/net6.0-windows7.0/UiPath.Python.Host.deps.json",
+        "bin/net6.0-windows7.0/UiPath.Python.Host.dll",
+        "bin/net6.0-windows7.0/UiPath.Python.Host.dll.config",
+        "bin/net6.0-windows7.0/UiPath.Python.Host.exe",
+        "bin/net6.0-windows7.0/UiPath.Python.Host.runtimeconfig.json",
+        "bin/net6.0-windows7.0/UiPath.Python.Host32.deps.json",
+        "bin/net6.0-windows7.0/UiPath.Python.Host32.dll",
+        "bin/net6.0-windows7.0/UiPath.Python.Host32.dll.config",
+        "bin/net6.0-windows7.0/UiPath.Python.Host32.exe",
+        "bin/net6.0-windows7.0/UiPath.Python.Host32.runtimeconfig.json",
+        "bin/net6.0-windows7.0/UiPath.Python.Packaging.dll",
+        "bin/net6.0-windows7.0/UiPath.Python.dll",
+        "bin/net6.0-windows7.0/UiPath.Workflow.dll",
+        "bin/net6.0-windows7.0/de/UiPath.Python.resources.dll",
+        "bin/net6.0-windows7.0/es-MX/UiPath.Python.resources.dll",
+        "bin/net6.0-windows7.0/es/UiPath.Python.resources.dll",
+        "bin/net6.0-windows7.0/fr/UiPath.Python.resources.dll",
+        "bin/net6.0-windows7.0/ja/UiPath.Python.resources.dll",
+        "bin/net6.0-windows7.0/ko/UiPath.Python.resources.dll",
+        "bin/net6.0-windows7.0/pt-BR/UiPath.Python.resources.dll",
+        "bin/net6.0-windows7.0/pt/UiPath.Python.resources.dll",
+        "bin/net6.0-windows7.0/ru/UiPath.Python.resources.dll",
+        "bin/net6.0-windows7.0/tr/UiPath.Python.resources.dll",
+        "bin/net6.0-windows7.0/x64/Python.Runtime.36.dll",
+        "bin/net6.0-windows7.0/x64/Python.Runtime.37.dll",
+        "bin/net6.0-windows7.0/x64/Python.Runtime.38.dll",
+        "bin/net6.0-windows7.0/x64/Python.Runtime.39.dll",
+        "bin/net6.0-windows7.0/x64/Python.Runtime.Unix.dll",
+        "bin/net6.0-windows7.0/x64/Python.Runtime.dll",
+        "bin/net6.0-windows7.0/x86/Python.Runtime.36.dll",
+        "bin/net6.0-windows7.0/x86/Python.Runtime.37.dll",
+        "bin/net6.0-windows7.0/x86/Python.Runtime.38.dll",
+        "bin/net6.0-windows7.0/x86/Python.Runtime.39.dll",
+        "bin/net6.0-windows7.0/x86/Python.Runtime.dll",
+        "bin/net6.0-windows7.0/zh-CN/UiPath.Python.resources.dll",
+        "bin/net6.0-windows7.0/zh-TW/UiPath.Python.resources.dll",
+        "bin/net6.0/Microsoft.CodeAnalysis.CSharp.Scripting.dll",
+        "bin/net6.0/Microsoft.CodeAnalysis.CSharp.dll",
+        "bin/net6.0/Microsoft.CodeAnalysis.Scripting.dll",
+        "bin/net6.0/Microsoft.CodeAnalysis.VisualBasic.Scripting.dll",
+        "bin/net6.0/Microsoft.CodeAnalysis.VisualBasic.dll",
+        "bin/net6.0/Microsoft.CodeAnalysis.dll",
+        "bin/net6.0/Microsoft.PowerFx.Core.dll",
+        "bin/net6.0/Microsoft.PowerFx.Interpreter.dll",
+        "bin/net6.0/Microsoft.PowerFx.Transport.Attributes.dll",
+        "bin/net6.0/Nito.AsyncEx.Tasks.dll",
+        "bin/net6.0/Nito.Disposables.dll",
+        "bin/net6.0/ReflectionMagic.dll",
+        "bin/net6.0/System.Activities.dll",
+        "bin/net6.0/System.CodeDom.dll",
+        "bin/net6.0/System.Xaml.dll",
+        "bin/net6.0/UiPath.Python.Activities.dll",
+        "bin/net6.0/UiPath.Python.Host.deps.json",
+        "bin/net6.0/UiPath.Python.Host.dll",
+        "bin/net6.0/UiPath.Python.Host.dll.config",
+        "bin/net6.0/UiPath.Python.Host.exe",
+        "bin/net6.0/UiPath.Python.Host.runtimeconfig.json",
+        "bin/net6.0/UiPath.Python.Host32.deps.json",
+        "bin/net6.0/UiPath.Python.Host32.dll",
+        "bin/net6.0/UiPath.Python.Host32.dll.config",
+        "bin/net6.0/UiPath.Python.Host32.exe",
+        "bin/net6.0/UiPath.Python.Host32.runtimeconfig.json",
+        "bin/net6.0/UiPath.Python.Packaging.dll",
+        "bin/net6.0/UiPath.Python.dll",
+        "bin/net6.0/UiPath.Workflow.dll",
+        "bin/net6.0/de/UiPath.Python.resources.dll",
+        "bin/net6.0/es-MX/UiPath.Python.resources.dll",
+        "bin/net6.0/es/UiPath.Python.resources.dll",
+        "bin/net6.0/fr/UiPath.Python.resources.dll",
+        "bin/net6.0/ja/UiPath.Python.resources.dll",
+        "bin/net6.0/ko/UiPath.Python.resources.dll",
+        "bin/net6.0/pt-BR/UiPath.Python.resources.dll",
+        "bin/net6.0/pt/UiPath.Python.resources.dll",
+        "bin/net6.0/ru/UiPath.Python.resources.dll",
+        "bin/net6.0/tr/UiPath.Python.resources.dll",
+        "bin/net6.0/x64/Python.Runtime.36.dll",
+        "bin/net6.0/x64/Python.Runtime.37.dll",
+        "bin/net6.0/x64/Python.Runtime.38.dll",
+        "bin/net6.0/x64/Python.Runtime.39.dll",
+        "bin/net6.0/x64/Python.Runtime.Unix.dll",
+        "bin/net6.0/x64/Python.Runtime.dll",
+        "bin/net6.0/x86/Python.Runtime.36.dll",
+        "bin/net6.0/x86/Python.Runtime.37.dll",
+        "bin/net6.0/x86/Python.Runtime.38.dll",
+        "bin/net6.0/x86/Python.Runtime.39.dll",
+        "bin/net6.0/x86/Python.Runtime.dll",
+        "bin/net6.0/zh-CN/UiPath.Python.resources.dll",
+        "bin/net6.0/zh-TW/UiPath.Python.resources.dll",
+        "lib/net461/UiPath.Python.Activities.Design.dll",
+        "lib/net461/UiPath.Python.Activities.dll",
+        "lib/net461/UiPath.Python.dll",
+        "lib/net461/de/UiPath.Python.Activities.Design.resources.dll",
+        "lib/net461/de/UiPath.Python.Activities.resources.dll",
+        "lib/net461/de/UiPath.Python.resources.dll",
+        "lib/net461/es-MX/UiPath.Python.Activities.Design.resources.dll",
+        "lib/net461/es-MX/UiPath.Python.Activities.resources.dll",
+        "lib/net461/es-MX/UiPath.Python.resources.dll",
+        "lib/net461/es/UiPath.Python.Activities.Design.resources.dll",
+        "lib/net461/es/UiPath.Python.Activities.resources.dll",
+        "lib/net461/es/UiPath.Python.resources.dll",
+        "lib/net461/fr/UiPath.Python.Activities.Design.resources.dll",
+        "lib/net461/fr/UiPath.Python.Activities.resources.dll",
+        "lib/net461/fr/UiPath.Python.resources.dll",
+        "lib/net461/ja/UiPath.Python.Activities.Design.resources.dll",
+        "lib/net461/ja/UiPath.Python.Activities.resources.dll",
+        "lib/net461/ja/UiPath.Python.resources.dll",
+        "lib/net461/ko/UiPath.Python.Activities.Design.resources.dll",
+        "lib/net461/ko/UiPath.Python.Activities.resources.dll",
+        "lib/net461/ko/UiPath.Python.resources.dll",
+        "lib/net461/pt-BR/UiPath.Python.Activities.Design.resources.dll",
+        "lib/net461/pt-BR/UiPath.Python.Activities.resources.dll",
+        "lib/net461/pt-BR/UiPath.Python.resources.dll",
+        "lib/net461/pt/UiPath.Python.Activities.Design.resources.dll",
+        "lib/net461/pt/UiPath.Python.Activities.resources.dll",
+        "lib/net461/pt/UiPath.Python.resources.dll",
+        "lib/net461/ru/UiPath.Python.Activities.Design.resources.dll",
+        "lib/net461/ru/UiPath.Python.Activities.resources.dll",
+        "lib/net461/ru/UiPath.Python.resources.dll",
+        "lib/net461/tr/UiPath.Python.Activities.Design.resources.dll",
+        "lib/net461/tr/UiPath.Python.Activities.resources.dll",
+        "lib/net461/tr/UiPath.Python.resources.dll",
+        "lib/net461/zh-CN/UiPath.Python.Activities.Design.resources.dll",
+        "lib/net461/zh-CN/UiPath.Python.Activities.resources.dll",
+        "lib/net461/zh-CN/UiPath.Python.resources.dll",
+        "lib/net461/zh-TW/UiPath.Python.Activities.Design.resources.dll",
+        "lib/net461/zh-TW/UiPath.Python.Activities.resources.dll",
+        "lib/net461/zh-TW/UiPath.Python.resources.dll",
+        "lib/net6.0-windows7.0/UiPath.Python.Activities.Design.dll",
+        "lib/net6.0-windows7.0/UiPath.Python.Activities.dll",
+        "lib/net6.0-windows7.0/UiPath.Python.dll",
+        "lib/net6.0-windows7.0/de/UiPath.Python.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/de/UiPath.Python.Activities.resources.dll",
+        "lib/net6.0-windows7.0/de/UiPath.Python.resources.dll",
+        "lib/net6.0-windows7.0/es-MX/UiPath.Python.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/es-MX/UiPath.Python.Activities.resources.dll",
+        "lib/net6.0-windows7.0/es-MX/UiPath.Python.resources.dll",
+        "lib/net6.0-windows7.0/es/UiPath.Python.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/es/UiPath.Python.Activities.resources.dll",
+        "lib/net6.0-windows7.0/es/UiPath.Python.resources.dll",
+        "lib/net6.0-windows7.0/fr/UiPath.Python.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/fr/UiPath.Python.Activities.resources.dll",
+        "lib/net6.0-windows7.0/fr/UiPath.Python.resources.dll",
+        "lib/net6.0-windows7.0/ja/UiPath.Python.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/ja/UiPath.Python.Activities.resources.dll",
+        "lib/net6.0-windows7.0/ja/UiPath.Python.resources.dll",
+        "lib/net6.0-windows7.0/ko/UiPath.Python.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/ko/UiPath.Python.Activities.resources.dll",
+        "lib/net6.0-windows7.0/ko/UiPath.Python.resources.dll",
+        "lib/net6.0-windows7.0/pt-BR/UiPath.Python.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/pt-BR/UiPath.Python.Activities.resources.dll",
+        "lib/net6.0-windows7.0/pt-BR/UiPath.Python.resources.dll",
+        "lib/net6.0-windows7.0/pt/UiPath.Python.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/pt/UiPath.Python.Activities.resources.dll",
+        "lib/net6.0-windows7.0/pt/UiPath.Python.resources.dll",
+        "lib/net6.0-windows7.0/ru/UiPath.Python.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/ru/UiPath.Python.Activities.resources.dll",
+        "lib/net6.0-windows7.0/ru/UiPath.Python.resources.dll",
+        "lib/net6.0-windows7.0/tr/UiPath.Python.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/tr/UiPath.Python.Activities.resources.dll",
+        "lib/net6.0-windows7.0/tr/UiPath.Python.resources.dll",
+        "lib/net6.0-windows7.0/zh-CN/UiPath.Python.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/zh-CN/UiPath.Python.Activities.resources.dll",
+        "lib/net6.0-windows7.0/zh-CN/UiPath.Python.resources.dll",
+        "lib/net6.0-windows7.0/zh-TW/UiPath.Python.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/zh-TW/UiPath.Python.Activities.resources.dll",
+        "lib/net6.0-windows7.0/zh-TW/UiPath.Python.resources.dll",
+        "lib/net6.0/UiPath.Python.Activities.dll",
+        "lib/net6.0/UiPath.Python.dll",
+        "lib/net6.0/de/UiPath.Python.Activities.resources.dll",
+        "lib/net6.0/de/UiPath.Python.resources.dll",
+        "lib/net6.0/es-MX/UiPath.Python.Activities.resources.dll",
+        "lib/net6.0/es-MX/UiPath.Python.resources.dll",
+        "lib/net6.0/es/UiPath.Python.Activities.resources.dll",
+        "lib/net6.0/es/UiPath.Python.resources.dll",
+        "lib/net6.0/fr/UiPath.Python.Activities.resources.dll",
+        "lib/net6.0/fr/UiPath.Python.resources.dll",
+        "lib/net6.0/ja/UiPath.Python.Activities.resources.dll",
+        "lib/net6.0/ja/UiPath.Python.resources.dll",
+        "lib/net6.0/ko/UiPath.Python.Activities.resources.dll",
+        "lib/net6.0/ko/UiPath.Python.resources.dll",
+        "lib/net6.0/pt-BR/UiPath.Python.Activities.resources.dll",
+        "lib/net6.0/pt-BR/UiPath.Python.resources.dll",
+        "lib/net6.0/pt/UiPath.Python.Activities.resources.dll",
+        "lib/net6.0/pt/UiPath.Python.resources.dll",
+        "lib/net6.0/ru/UiPath.Python.Activities.resources.dll",
+        "lib/net6.0/ru/UiPath.Python.resources.dll",
+        "lib/net6.0/tr/UiPath.Python.Activities.resources.dll",
+        "lib/net6.0/tr/UiPath.Python.resources.dll",
+        "lib/net6.0/zh-CN/UiPath.Python.Activities.resources.dll",
+        "lib/net6.0/zh-CN/UiPath.Python.resources.dll",
+        "lib/net6.0/zh-TW/UiPath.Python.Activities.resources.dll",
+        "lib/net6.0/zh-TW/UiPath.Python.resources.dll",
+        "uipath.python.activities.1.8.0.nupkg.sha512",
+        "uipath.python.activities.nuspec"
+      ]
+    },
     "UiPath.System.Activities/21.10.5": {
       "sha512": "s9eZnHNKsILJiBw6iX8PlgcUg7uzFH84HD5Om2kAebR+39CqIRxEFPsS9Rbdy74Lj3YW4FINK7wrnUnEa7WpKA==",
       "type": "package",
@@ -18789,6 +19578,101 @@
         "uipath.vision.3.1.4.nupkg.sha512",
         "uipath.vision.nuspec"
       ]
+    },
+    "UiPath.WebAPI.Activities/1.18.0": {
+      "sha512": "D1LUedZSUPBp2S2AeyZDc0eDk3JsTbiiGKTrWalipWJpKfUqBOcrYw0mxvfOr6rZIiPA8xEyjkOIvedTmN5Cdg==",
+      "type": "package",
+      "path": "uipath.webapi.activities/1.18.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/Runtime.Mapping.json",
+        "lib/net461/UiPath.Web.Activities.Design.dll",
+        "lib/net461/UiPath.Web.Activities.RulesLibrary.dll",
+        "lib/net461/de/UiPath.Web.Activities.Design.resources.dll",
+        "lib/net461/es-MX/UiPath.Web.Activities.Design.resources.dll",
+        "lib/net461/es/UiPath.Web.Activities.Design.resources.dll",
+        "lib/net461/fr/UiPath.Web.Activities.Design.resources.dll",
+        "lib/net461/ja/UiPath.Web.Activities.Design.resources.dll",
+        "lib/net461/ko/UiPath.Web.Activities.Design.resources.dll",
+        "lib/net461/pt-BR/UiPath.Web.Activities.Design.resources.dll",
+        "lib/net461/pt/UiPath.Web.Activities.Design.resources.dll",
+        "lib/net461/ru/UiPath.Web.Activities.Design.resources.dll",
+        "lib/net461/tr/UiPath.Web.Activities.Design.resources.dll",
+        "lib/net461/zh-CN/UiPath.Web.Activities.Design.resources.dll",
+        "lib/net461/zu/UiPath.Web.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/UiPath.Web.Activities.Design.dll",
+        "lib/net6.0-windows7.0/UiPath.Web.Activities.RulesLibrary.dll",
+        "lib/net6.0-windows7.0/de/UiPath.Web.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/es-MX/UiPath.Web.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/es/UiPath.Web.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/fr/UiPath.Web.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/ja/UiPath.Web.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/ko/UiPath.Web.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/pt-BR/UiPath.Web.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/pt/UiPath.Web.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/ru/UiPath.Web.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/tr/UiPath.Web.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/zh-CN/UiPath.Web.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/zu/UiPath.Web.Activities.Design.resources.dll",
+        "lib/net6.0/UiPath.Web.Activities.RulesLibrary.dll",
+        "lib/net6.0/UiPath.Web.Activities.ViewModels.dll",
+        "uipath.webapi.activities.1.18.0.nupkg.sha512",
+        "uipath.webapi.activities.nuspec"
+      ]
+    },
+    "UiPath.WebAPI.Runtime/1.18.0": {
+      "sha512": "RhCTKRcIoNXAZ2lH23YJ78y0FC8bwLMqzjW5se+Bgg3CHXojx0Ubegl8vXqhpLpP9rttK8Ssi4mWfMVVn4yFoA==",
+      "type": "package",
+      "path": "uipath.webapi.runtime/1.18.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/UiPath.Web.Activities.dll",
+        "lib/net461/UiPath.Web.dll",
+        "lib/net461/de/UiPath.Web.Activities.resources.dll",
+        "lib/net461/es-MX/UiPath.Web.Activities.resources.dll",
+        "lib/net461/es/UiPath.Web.Activities.resources.dll",
+        "lib/net461/fr/UiPath.Web.Activities.resources.dll",
+        "lib/net461/ja/UiPath.Web.Activities.resources.dll",
+        "lib/net461/ko/UiPath.Web.Activities.resources.dll",
+        "lib/net461/pt-BR/UiPath.Web.Activities.resources.dll",
+        "lib/net461/pt/UiPath.Web.Activities.resources.dll",
+        "lib/net461/ru/UiPath.Web.Activities.resources.dll",
+        "lib/net461/tr/UiPath.Web.Activities.resources.dll",
+        "lib/net461/zh-CN/UiPath.Web.Activities.resources.dll",
+        "lib/net461/zu/UiPath.Web.Activities.resources.dll",
+        "lib/net6.0-windows7.0/UiPath.Web.Activities.dll",
+        "lib/net6.0-windows7.0/UiPath.Web.dll",
+        "lib/net6.0-windows7.0/de/UiPath.Web.Activities.resources.dll",
+        "lib/net6.0-windows7.0/es-MX/UiPath.Web.Activities.resources.dll",
+        "lib/net6.0-windows7.0/es/UiPath.Web.Activities.resources.dll",
+        "lib/net6.0-windows7.0/fr/UiPath.Web.Activities.resources.dll",
+        "lib/net6.0-windows7.0/ja/UiPath.Web.Activities.resources.dll",
+        "lib/net6.0-windows7.0/ko/UiPath.Web.Activities.resources.dll",
+        "lib/net6.0-windows7.0/pt-BR/UiPath.Web.Activities.resources.dll",
+        "lib/net6.0-windows7.0/pt/UiPath.Web.Activities.resources.dll",
+        "lib/net6.0-windows7.0/ru/UiPath.Web.Activities.resources.dll",
+        "lib/net6.0-windows7.0/tr/UiPath.Web.Activities.resources.dll",
+        "lib/net6.0-windows7.0/zh-CN/UiPath.Web.Activities.resources.dll",
+        "lib/net6.0-windows7.0/zu/UiPath.Web.Activities.resources.dll",
+        "lib/net6.0/UiPath.Web.Activities.dll",
+        "lib/net6.0/UiPath.Web.dll",
+        "lib/net6.0/de/UiPath.Web.Activities.resources.dll",
+        "lib/net6.0/es-MX/UiPath.Web.Activities.resources.dll",
+        "lib/net6.0/es/UiPath.Web.Activities.resources.dll",
+        "lib/net6.0/fr/UiPath.Web.Activities.resources.dll",
+        "lib/net6.0/ja/UiPath.Web.Activities.resources.dll",
+        "lib/net6.0/ko/UiPath.Web.Activities.resources.dll",
+        "lib/net6.0/pt-BR/UiPath.Web.Activities.resources.dll",
+        "lib/net6.0/pt/UiPath.Web.Activities.resources.dll",
+        "lib/net6.0/ru/UiPath.Web.Activities.resources.dll",
+        "lib/net6.0/tr/UiPath.Web.Activities.resources.dll",
+        "lib/net6.0/zh-CN/UiPath.Web.Activities.resources.dll",
+        "lib/net6.0/zu/UiPath.Web.Activities.resources.dll",
+        "uipath.webapi.runtime.1.18.0.nupkg.sha512",
+        "uipath.webapi.runtime.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -18799,8 +19683,10 @@
       "UiPath.Excel.Activities >= 2.22.3 <= 2.22.3",
       "UiPath.Mail.Activities >= 1.12.3 <= 1.12.3",
       "UiPath.PDF.Activities >= 3.16.0 <= 3.16.0",
+      "UiPath.Python.Activities >= 1.8.0 <= 1.8.0",
       "UiPath.System.Activities >= 21.10.5 <= 21.10.5",
-      "UiPath.UIAutomation.Activities >= 21.10.6 <= 21.10.6"
+      "UiPath.UIAutomation.Activities >= 21.10.6 <= 21.10.6",
+      "UiPath.WebAPI.Activities >= 1.18.0 <= 1.18.0"
     ]
   },
   "packageFolders": {
@@ -18842,6 +19728,11 @@
             "target": "Package",
             "version": "[3.16.0, 3.16.0]"
           },
+          "UiPath.Python.Activities": {
+            "include": "Runtime",
+            "target": "Package",
+            "version": "[1.8.0, 1.8.0]"
+          },
           "UiPath.System.Activities": {
             "include": "Runtime",
             "target": "Package",
@@ -18851,6 +19742,11 @@
             "include": "Runtime",
             "target": "Package",
             "version": "[21.10.6, 21.10.6]"
+          },
+          "UiPath.WebAPI.Activities": {
+            "include": "Runtime",
+            "target": "Package",
+            "version": "[1.18.0, 1.18.0]"
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\UiPath\\Studio\\runtime.json"

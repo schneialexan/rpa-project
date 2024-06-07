@@ -1,8 +1,10 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="DownloadFiles" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="DownloadFiles" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="download_children" Type="InArgument(scg:IEnumerable(ui:UiElement))" />
+    <x:Property Name="str_log_file" Type="InArgument(x:String)" />
+    <x:Property Name="str_log_folder" Type="InArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>921.333333333333,1976</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1105.3333333333333,2916</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="24">
@@ -33,7 +35,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="29">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="56">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -62,62 +64,63 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Python</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sequence - Main" sap:VirtualizedContainerService.HintSize="884.666666666667,2406.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_27">
+  <Sequence DisplayName="Sequence - Main" sap:VirtualizedContainerService.HintSize="1115.3333333333333,2264.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_27">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Name="download_path">
-        <Variable.Default>
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + &quot;\Downloads&quot;  + &quot;\rechnungen_rpa&quot;" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:String" Default="[Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + &quot;\Downloads&quot;  + &quot;\rechnungen_rpa&quot;]" Name="download_path" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Sequence - Check for Download Path" sap:VirtualizedContainerService.HintSize="842.666666666667,732" sap2010:WorkflowViewState.IdRef="Sequence_26">
-      <Sequence.Variables>
-        <Variable x:TypeArguments="x:Boolean" Name="bool_path_exists" />
-      </Sequence.Variables>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <ui:FolderExistsX DisplayName="Folder Exists" Exists="[bool_path_exists]" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="FolderExistsX_2" Path="[download_path]" />
-      <If Condition="[not bool_path_exists]" sap:VirtualizedContainerService.HintSize="484,466" sap2010:WorkflowViewState.IdRef="If_4">
-        <If.Then>
-          <Sequence sap:VirtualizedContainerService.HintSize="376,274" sap2010:WorkflowViewState.IdRef="Sequence_24">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="WriteLine_9" Text="[&quot;Creating Folder: &quot; + download_path]" />
-            <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="334,80" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[download_path]" />
-          </Sequence>
-        </If.Then>
-        <If.Else>
-          <Sequence sap2010:WorkflowViewState.IdRef="Sequence_25">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-          </Sequence>
-        </If.Else>
-      </If>
-    </Sequence>
-    <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="842.666666666667,1542.66666666667" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[download_children]">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke CreateFolder workflow" sap:VirtualizedContainerService.HintSize="1073.3333333333333,113.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="CreateFolder.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="download_path">[download_path]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="str_log_folder">[str_log_folder]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="str_log_file">[str_log_file]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <Assign sap:VirtualizedContainerService.HintSize="1073.3333333333333,61.333333333333336" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[download_path]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[download_path + "\" + DateTime.Now.ToString("yyyyMMdd")]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke CreateFolder workflow" sap:VirtualizedContainerService.HintSize="1073.3333333333333,113.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="CreateFolder.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="download_path">
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="download_path" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="str_log_folder">
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="str_log_folder" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="str_log_file">
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="str_log_file" />
+        </InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1073.3333333333333,1764.6666666666667" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[download_children]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="ui:UiElement">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:UiElement" Name="item" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body - outer" sap:VirtualizedContainerService.HintSize="806,1416" sap2010:WorkflowViewState.IdRef="Sequence_8">
+          <Sequence DisplayName="Body - outer" sap:VirtualizedContainerService.HintSize="1036.6666666666667,1638" sap2010:WorkflowViewState.IdRef="Sequence_8">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="string_item_name" />
             </Sequence.Variables>
@@ -126,7 +129,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="href" DisplayName="Get Attribute" sap:VirtualizedContainerService.HintSize="764,165.333333333333" sap2010:WorkflowViewState.IdRef="GetAttribute_1">
+            <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="href" DisplayName="Get Attribute" sap:VirtualizedContainerService.HintSize="994.6666666666666,165.33333333333334" sap2010:WorkflowViewState.IdRef="GetAttribute_1">
               <ui:GetAttribute.Result>
                 <OutArgument x:TypeArguments="x:String">[string_item_name]</OutArgument>
               </ui:GetAttribute.Result>
@@ -141,23 +144,21 @@
                 </ui:Target>
               </ui:GetAttribute.Target>
             </ui:GetAttribute>
-            <If Condition="[string_item_name.Contains(&quot;.pdf&quot;)]" sap:VirtualizedContainerService.HintSize="764,1118.66666666667" sap2010:WorkflowViewState.IdRef="If_3">
+            <If Condition="[string_item_name.Contains(&quot;.pdf&quot;)]" sap:VirtualizedContainerService.HintSize="994.6666666666666,1340.6666666666667" sap2010:WorkflowViewState.IdRef="If_3">
               <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="476,956.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                <Sequence sap:VirtualizedContainerService.HintSize="476,1178" sap2010:WorkflowViewState.IdRef="Sequence_21">
                   <Sequence.Variables>
-                    <Variable x:TypeArguments="x:String" Name="download_path_user">
-                      <Variable.Default>
-                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + &quot;\Downloads&quot;" />
-                      </Variable.Default>
-                    </Variable>
+                    <Variable x:TypeArguments="x:String" Default="[Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + &quot;\Downloads&quot;]" Name="download_path_user" />
                     <Variable x:TypeArguments="x:String" Name="string_file_name" />
+                    <Variable x:TypeArguments="x:String" Name="str_log_level" />
+                    <Variable x:TypeArguments="x:String" Name="str_log_input" />
                   </Sequence.Variables>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:GetLastDownloadedFile File="{x:Null}" Timeout="{x:Null}" DisplayName="Wait for Download" DownloadFolder="[download_path_user]" sap:VirtualizedContainerService.HintSize="434,369.333333333333" sap2010:WorkflowViewState.IdRef="GetLastDownloadedFile_4">
+                  <ui:GetLastDownloadedFile File="{x:Null}" Timeout="{x:Null}" DisplayName="Wait for Download" DownloadFolder="[download_path_user]" sap:VirtualizedContainerService.HintSize="434,369.3333333333333" sap2010:WorkflowViewState.IdRef="GetLastDownloadedFile_4">
                     <ui:GetLastDownloadedFile.Body>
                       <ActivityAction>
                         <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,160" sap2010:WorkflowViewState.IdRef="Sequence_23">
@@ -192,13 +193,13 @@
                       </ActivityAction>
                     </ui:GetLastDownloadedFile.Body>
                   </ui:GetLastDownloadedFile>
-                  <Sequence DisplayName="Sequence - Move Files to Folder" sap:VirtualizedContainerService.HintSize="434,353.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                  <Sequence DisplayName="Sequence - Move Files to Folder" sap:VirtualizedContainerService.HintSize="434,353.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_28">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Assign sap:VirtualizedContainerService.HintSize="384,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign sap:VirtualizedContainerService.HintSize="384,61.333333333333336" sap2010:WorkflowViewState.IdRef="Assign_1">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[string_file_name]</OutArgument>
                       </Assign.To>
@@ -208,17 +209,80 @@
                     </Assign>
                     <ui:MoveFile ContinueOnError="{x:Null}" Destination="[download_path]" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="384,160" sap2010:WorkflowViewState.IdRef="MoveFile_1" Overwrite="False" Path="[download_path_user + &quot;\&quot; + string_file_name]" />
                   </Sequence>
-                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,62" sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="[&quot;Downloaded File: &quot; + string_item_name + &quot; successfully!&quot;]" />
+                  <ui:MultipleAssign DisplayName="Multiple Assign - For Logging" sap:VirtualizedContainerService.HintSize="434,130" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+                    <ui:MultipleAssign.AssignOperations>
+                      <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="x:String">[str_log_level]</OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="x:String">INFO</InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="x:String">[str_log_input]</OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="x:String">["Downloaded File: " + string_item_name + " successfully!"]</InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                      </scg:List>
+                    </ui:MultipleAssign.AssignOperations>
+                  </ui:MultipleAssign>
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke WriteLog workflow" sap:VirtualizedContainerService.HintSize="434,113.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="WriteLog.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <InArgument x:TypeArguments="x:String" x:Key="str_log_folder">[str_log_folder]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="str_log_file">[str_log_file]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="str_log_input">[str_log_input]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="str_log_level">[str_log_level]</InArgument>
+                    </ui:InvokeWorkflowFile.Arguments>
+                  </ui:InvokeWorkflowFile>
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                <Sequence sap:VirtualizedContainerService.HintSize="472.6666666666667,437.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="str_log_level" />
+                    <Variable x:TypeArguments="x:String" Name="str_log_input" />
+                  </Sequence.Variables>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:Continue sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Continue_2" />
+                  <ui:MultipleAssign DisplayName="Multiple Assign - For Logging" sap:VirtualizedContainerService.HintSize="430.6666666666667,130" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+                    <ui:MultipleAssign.AssignOperations>
+                      <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="x:String">[str_log_level]</OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="x:String">INFO</InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="x:String">[str_log_input]</OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="x:String">["Skipped File: " + item.GetFriendlyName]</InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                      </scg:List>
+                    </ui:MultipleAssign.AssignOperations>
+                  </ui:MultipleAssign>
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke WriteLog workflow" sap:VirtualizedContainerService.HintSize="430.6666666666667,113.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="WriteLog.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <InArgument x:TypeArguments="x:String" x:Key="str_log_folder">[str_log_folder]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="str_log_file">[str_log_file]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="str_log_input">[str_log_input]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="str_log_level">[str_log_level]</InArgument>
+                    </ui:InvokeWorkflowFile.Arguments>
+                  </ui:InvokeWorkflowFile>
+                  <ui:Continue sap:VirtualizedContainerService.HintSize="430.6666666666667,22" sap2010:WorkflowViewState.IdRef="Continue_2" />
                 </Sequence>
               </If.Else>
             </If>
