@@ -1,0 +1,130 @@
+{
+  "ObjProjectSettings": {
+    "StrName": "RPAInvoiceCollector",
+    "StrVersion": "0.0.4",
+    "StrAuthors": "IKAVA AG",
+    "StrOwners": "IKAVA AG",
+    "StrDescription": "IKAVA AG Project",
+    "StrUsings": "",
+    "StrDlls": ""
+  },
+  "LstEntity": [
+    {
+      "StrName": "Invoice",
+      "StrType": null,
+      "EnmType": 0,
+      "StrDescription": "",
+      "StrConstructor": "",
+      "LstField": [
+        {
+          "StrName": "ID",
+          "EnmType": 0,
+          "StrType": "",
+          "BolIsList": false,
+          "StrDescription": "System built-in field",
+          "StrLastModifiedOn": "",
+          "StrDefault": "Guid.NewGuid().ToString()"
+        },
+        {
+          "StrName": "CreateTime",
+          "EnmType": 3,
+          "StrType": "",
+          "BolIsList": false,
+          "StrDescription": "System built-in field",
+          "StrLastModifiedOn": "",
+          "StrDefault": "DateTime.Now"
+        },
+        {
+          "StrName": "RecordID",
+          "EnmType": 0,
+          "StrType": "",
+          "BolIsList": false,
+          "StrDescription": "System built-in field",
+          "StrLastModifiedOn": "",
+          "StrDefault": ""
+        },
+        {
+          "StrName": "RecordCreateTime",
+          "EnmType": 3,
+          "StrType": "",
+          "BolIsList": false,
+          "StrDescription": "System built-in field",
+          "StrLastModifiedOn": "",
+          "StrDefault": ""
+        },
+        {
+          "StrName": "RecordUpdateTime",
+          "EnmType": 3,
+          "StrType": "",
+          "BolIsList": false,
+          "StrDescription": "System built-in field",
+          "StrLastModifiedOn": "",
+          "StrDefault": ""
+        },
+        {
+          "StrName": "RecordInProgress",
+          "EnmType": 2,
+          "StrType": "",
+          "BolIsList": false,
+          "StrDescription": "System built-in field",
+          "StrLastModifiedOn": "",
+          "StrDefault": ""
+        },
+        {
+          "StrName": "Rechnungsnummer",
+          "EnmType": 0,
+          "StrType": "",
+          "BolIsList": false,
+          "StrDescription": "",
+          "StrLastModifiedOn": "",
+          "StrDefault": ""
+        },
+        {
+          "StrName": "Vorname",
+          "EnmType": 0,
+          "StrType": "",
+          "BolIsList": false,
+          "StrDescription": "",
+          "StrLastModifiedOn": "",
+          "StrDefault": ""
+        },
+        {
+          "StrName": "Nachname",
+          "EnmType": 0,
+          "StrType": "",
+          "BolIsList": false,
+          "StrDescription": "",
+          "StrLastModifiedOn": "",
+          "StrDefault": ""
+        },
+        {
+          "StrName": "Betrag",
+          "EnmType": 0,
+          "StrType": "",
+          "BolIsList": false,
+          "StrDescription": "",
+          "StrLastModifiedOn": "",
+          "StrDefault": ""
+        },
+        {
+          "StrName": "Firmenname",
+          "EnmType": 0,
+          "StrType": "",
+          "BolIsList": false,
+          "StrDescription": "",
+          "StrLastModifiedOn": "",
+          "StrDefault": ""
+        },
+        {
+          "StrName": "Adresse",
+          "EnmType": 0,
+          "StrType": "",
+          "BolIsList": false,
+          "StrDescription": "",
+          "StrLastModifiedOn": "",
+          "StrDefault": ""
+        }
+      ]
+    }
+  ]
+}
