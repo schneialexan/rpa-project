@@ -44,7 +44,7 @@ Each day, various invoice documents are uploaded to the company's website by 8 A
 
 ## 🎞️ Demo
 
-[![Demo](Demo.mp4)](Demo.mp4)
+The [Demo.mp4](Demo.mp4) is a 200mb 2 minute long video, with how it works (no sound is on purpose).
 
 ## 📦 Features
 
